@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:insulation"
+    ]
+  },
+  "criteria": {
+    "has_white_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:white_wool"
+            ]
+          }
+        ]
+      }
+    },
+    "has_wood_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+            "items": [
+              {
+                "tag": "minecraft:wooden_slabs"
+              }
+            ]
+          }
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:insulation"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_wool",
+      "has_wood_slab",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        "bathroom:bathroom_tiles",
+        "bathroom:raw_bathroom",
+        "bathroom:dark_sliptiles",
+        "bathroom:sliptiles",
+        "bathroom:mixed_sliptiles",
+        "bathroom:slipbricks",
+        "bathroom:dark_slipbricks",
+        "bathroom:mixed_bricks",
+        "bathroom:inky_cobblestone",
+        "bathroom:inky_moss_stone"
+    ]
+}

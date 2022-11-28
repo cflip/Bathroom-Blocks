@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:mixed_sliptiles"
+    ]
+  },
+  "criteria": {
+    "has_sliptiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:sliptiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_dark_sliptiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:dark_sliptiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:mixed_sliptiles"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sliptiles",
+      "has_dark_sliptiles",
+      "has_the_recipe"
+    ]
+  ]
+}

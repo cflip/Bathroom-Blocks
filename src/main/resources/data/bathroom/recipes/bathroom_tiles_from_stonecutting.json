@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "count": 1,
+    "ingredient": {
+        "item": "bathroom:raw_bathroom"
+    },
+    "result": "bathroom:bathroom_tiles"
+}

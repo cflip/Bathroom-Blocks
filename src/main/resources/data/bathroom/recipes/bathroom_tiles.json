@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "#": {
+            "item": "bathroom:raw_bathroom"
+        }
+    },
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "result": {
+        "count": 4,
+        "item": "bathroom:bathroom_tiles"
+    }
+}

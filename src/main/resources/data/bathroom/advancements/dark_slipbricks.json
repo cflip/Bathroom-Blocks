@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:dark_slipbricks"
+    ]
+  },
+  "criteria": {
+    "has_dark_sliptiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:dark_sliptiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:dark_slipbricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dark_sliptiles",
+      "has_the_recipe"
+    ]
+  ]
+}

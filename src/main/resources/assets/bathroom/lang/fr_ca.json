@@ -1,0 +1,18 @@
+{
+  "block.bathroom.bathroom_tiles": "Tuiles de bain",
+  "block.bathroom.raw_bathroom": "Tuilebain brute",
+  "block.bathroom.sliptiles": "Glissetuiles",
+  "block.bathroom.dark_sliptiles": "Glissetuiles sombres",
+  "block.bathroom.mixed_sliptiles": "Glissetuiles mixtes",
+  "block.bathroom.slipbricks": "Glissebriques",
+  "block.bathroom.dark_slipbricks": "Glissebriques sombres",
+  "block.bathroom.mixed_bricks": "Briques mixtes",
+  "block.bathroom.insulation": "Isolation",
+  "block.bathroom.inky_cobblestone": "Cobblestone d'encre",
+  "block.bathroom.inky_moss_stone": "Cobblestone moussue d'encre",
+
+  "item.bathroom.bathroom_critter": "Bestiole de bain",
+  "item.bathroom.splendor_critter": "Bestiole de splendeur",
+  "item.bathroom.gummies": "Gummies",
+  "item.bathroom.worms_in_dirt": "Vers dans la saleté"
+}

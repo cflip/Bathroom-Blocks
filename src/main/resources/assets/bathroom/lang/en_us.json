@@ -1,0 +1,18 @@
+{
+    "block.bathroom.bathroom_tiles": "Bathroom Tiles",
+    "block.bathroom.raw_bathroom": "Raw Bathroom",
+    "block.bathroom.sliptiles": "Sliptiles",
+    "block.bathroom.dark_sliptiles": "Dark Sliptiles",
+    "block.bathroom.mixed_sliptiles": "Mixed Sliptiles",
+    "block.bathroom.slipbricks": "Slipbricks",
+    "block.bathroom.dark_slipbricks": "Dark Slipbricks",
+    "block.bathroom.mixed_bricks": "Mixed Bricks",
+    "block.bathroom.insulation": "Insulation",
+    "block.bathroom.inky_cobblestone": "Inky Cobblestone",
+    "block.bathroom.inky_moss_stone": "Inky Moss Stone",
+
+    "item.bathroom.bathroom_critter": "Bathroom Critter",
+    "item.bathroom.splendor_critter": "Splendor Critter",
+    "item.bathroom.gummies": "Gummies",
+    "item.bathroom.worms_in_dirt": "Worms in Dirt"
+}

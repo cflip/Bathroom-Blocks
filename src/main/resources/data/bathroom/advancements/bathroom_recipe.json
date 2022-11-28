@@ -1,0 +1,35 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "bathroom:bathroom_tiles",
+            "bathroom:bathroom_tiles_from_stonecutting"
+        ]
+    },
+    "criteria": {
+        "has_raw_bathroom": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "bathroom:raw_bathroom"
+                        ]
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "bathroom:bathroom_tiles"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_raw_bathroom",
+            "has_the_recipe"
+        ]
+    ]
+}

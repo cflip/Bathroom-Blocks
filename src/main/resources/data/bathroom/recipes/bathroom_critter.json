@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bathroom:raw_bathroom"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "I#I",
+    "#G#",
+    "I#I"
+  ],
+  "result": {
+    "item": "bathroom:bathroom_critter"
+  }
+}
