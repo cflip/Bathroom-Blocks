@@ -8,6 +8,9 @@
   "entrypoints": {
     "main": [
       "su.bathroom.BathroomMod"
+    ],
+    "client": [
+      "su.bathroom.BathroomModClient"
     ]
   },
   "depends": {
