@@ -1,0 +1,34 @@
+{
+  "parent": "bathroom:sliptile",
+  "display": {
+    "icon": {
+      "item": "bathroom:mixed_sliptiles"
+    },
+    "title": {
+      "translate": "advancements.bathroom.mixed.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.mixed.description"
+    },
+    "hidden": false
+  },
+  "criteria": {
+    "craft_mixed_sliptiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:mixed_sliptiles"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_mixed_sliptiles"
+    ]
+  ]
+}

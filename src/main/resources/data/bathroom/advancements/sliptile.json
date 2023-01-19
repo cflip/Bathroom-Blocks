@@ -1,0 +1,33 @@
+{
+  "parent": "bathroom:bathroom",
+  "display": {
+    "icon": {
+      "item": "bathroom:sliptiles"
+    },
+    "title": {
+      "translate": "advancements.bathroom.sliptile.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.sliptile.description"
+    }
+  },
+  "criteria": {
+    "craft_sliptiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:sliptiles"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_sliptiles"
+    ]
+  ]
+}

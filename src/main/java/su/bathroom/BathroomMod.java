@@ -13,6 +13,7 @@ import net.minecraft.block.Material;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -44,12 +45,25 @@ public class BathroomMod implements ModInitializer {
 	public static final Block MIXED_BRICKS = new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(2F, 6.0F));
 	public static final Block INKY_COBBLESTONE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2F, 6.0F));
 	public static final Block INKY_MOSS_STONE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2F, 6.0F));
+	public static final Block YOPORE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3F, 3.0F));
+
 	public static final Block INSULATION = new Block(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOL).strength(1.2F, 3.0F));
 
 	public static final Item BATHROOM_CRITTER = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 	public static final Item SPLENDOR_CRITTER = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final Item YOPER = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 	public static final Item GUMMIES = new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(GUMMIES_FOOD));
 	public static final Item WORMS_IN_DIRT = new StewItem(new FabricItemSettings().group(ItemGroup.FOOD).food(WORMS_IN_DIRT_FOOD));
+
+
+	public static final PaintingVariant MARKET = registerPainting("market", new PaintingVariant(16,16));
+	public static final PaintingVariant EEL = registerPainting("eel", new PaintingVariant(16,16));
+	public static final PaintingVariant DAMP = registerPainting("damp", new PaintingVariant(16,32));
+	public static final PaintingVariant HELLPIPE = registerPainting("hellpipe", new PaintingVariant(32,16));
+
+	private static PaintingVariant registerPainting(String name, PaintingVariant PaintingVariant) {
+		return Registry.register(Registry.PAINTING_VARIANT, new Identifier("bathroom", name), PaintingVariant);
+	}
 
 	// TODO: Add a spawn egg
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
@@ -61,6 +75,16 @@ public class BathroomMod implements ModInitializer {
 
 	public static PlacedFeature RAW_BATHROOM_PLACED_FEATURE = new PlacedFeature(
 			RegistryEntry.of(RAW_BATHROOM_FEATURE),
+			Arrays.asList(
+					CountPlacementModifier.of(1),
+					HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))
+			));
+	private static final ConfiguredFeature<?, ?> YOPORE_FEATURE = new ConfiguredFeature(
+			Feature.ORE,
+			new OreFeatureConfig(OreConfiguredFeatures.BASE_STONE_NETHER, YOPORE.getDefaultState(), 6)
+	);
+	public static PlacedFeature YOPORE_PLACED_FEATURE = new PlacedFeature(
+			RegistryEntry.of(YOPORE_FEATURE),
 			Arrays.asList(
 					CountPlacementModifier.of(1),
 					HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))
@@ -83,6 +107,8 @@ public class BathroomMod implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("bathroom", "dark_slipbricks"), DARK_SLIPBRICKS);
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "dark_slipbricks"), new BlockItem(DARK_SLIPBRICKS, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.BLOCK, new Identifier("bathroom", "mixed_bricks"), MIXED_BRICKS);
+		Registry.register(Registry.BLOCK, new Identifier("bathroom", "yopore"), YOPORE);
+		Registry.register(Registry.ITEM, new Identifier("bathroom", "yopore"), new BlockItem(YOPORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "mixed_bricks"), new BlockItem(MIXED_BRICKS, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.BLOCK, new Identifier("bathroom", "inky_cobblestone"), INKY_COBBLESTONE);
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "inky_cobblestone"), new BlockItem(INKY_COBBLESTONE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
@@ -94,13 +120,18 @@ public class BathroomMod implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "bathroom_critter"), BATHROOM_CRITTER);
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "splendor_critter"), SPLENDOR_CRITTER);
+		Registry.register(Registry.ITEM, new Identifier("bathroom", "yoper"), YOPER);
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "gummies"), GUMMIES);
 		Registry.register(Registry.ITEM, new Identifier("bathroom", "worms_in_dirt"), WORMS_IN_DIRT);
 
+		//no more worldgen OK OK OK??
+		//Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("bathroom", "raw_bathroom_gen"), RAW_BATHROOM_FEATURE);
+		//Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("bathroom", "raw_bathroom_gen"), RAW_BATHROOM_PLACED_FEATURE);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier("bathroom", "raw_bathroom_gen")));
 
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("bathroom", "raw_bathroom_gen"), RAW_BATHROOM_FEATURE);
-		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("bathroom", "raw_bathroom_gen"), RAW_BATHROOM_PLACED_FEATURE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier("bathroom", "raw_bathroom_gen")));
+		//Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("bathroom", "yopore_gen"), YOPORE_FEATURE);
+		//Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("bathroom", "yopore_gen"), YOPORE_PLACED_FEATURE);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier("bathroom", "yopore_gen")));
 
 		PIG_CREEPER_ENTITY = Registry.register(Registry.ENTITY_TYPE, new Identifier("bathroom", "pig_creeper"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, PigCreeperEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).trackRangeBlocks(8).build());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);

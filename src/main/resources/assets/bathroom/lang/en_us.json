@@ -10,9 +10,32 @@
     "block.bathroom.insulation": "Insulation",
     "block.bathroom.inky_cobblestone": "Inky Cobblestone",
     "block.bathroom.inky_moss_stone": "Inky Moss Stone",
+    "block.bathroom.yopore": "Yopore",
 
     "item.bathroom.bathroom_critter": "Bathroom Critter",
     "item.bathroom.splendor_critter": "Splendor Critter",
+    "item.bathroom.yoper": "Yoper",
     "item.bathroom.gummies": "Gummies",
-    "item.bathroom.worms_in_dirt": "Worms in Dirt"
+    "item.bathroom.worms_in_dirt": "Worms in Dirt",
+
+    "advancements.bathroom.root.title": "Bathroom Blocks",
+    "advancements.bathroom.root.description": "Obtain raw bathroom",
+    "advancements.bathroom.bathroom.title": "Welcome to the Bathroom",
+    "advancements.bathroom.bathroom.description": "Craft bathroom tiles",
+    "advancements.bathroom.sliptile.title": "Enter the Slip",
+    "advancements.bathroom.sliptile.description": "Craft sliptiles",
+    "advancements.bathroom.mixed.title": "Washroom Checkers",
+    "advancements.bathroom.mixed.description": "Craft mixed sliptiles",
+    "advancements.bathroom.gummy.title": "On November 13th",
+    "advancements.bathroom.gummy.description": "Craft gummies",
+    "advancements.bathroom.worm.title": "Crawling with Filth",
+    "advancements.bathroom.worm.description": "Craft worms in dirt",
+    "advancements.bathroom.bricks.title": "BRICKS FROM MINECRAFT!",
+    "advancements.bathroom.bricks.description": "Craft mixed bricks",
+    "advancements.bathroom.critter.title": "Divine Latrinalia",
+    "advancements.bathroom.critter.description": "Give form to a bathroom critter",
+    "advancements.bathroom.splendor.title": "O' Melonville Splendor",
+    "advancements.bathroom.splendor.description": "Give form to a splendor critter",
+    "advancements.bathroom.yoper.title": "The Air Crackles with Freedom",
+    "advancements.bathroom.yoper.description": "Obtain a yoper"
 }

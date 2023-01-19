@@ -10,9 +10,32 @@
   "block.bathroom.insulation": "Isolation",
   "block.bathroom.inky_cobblestone": "Cobblestone d'encre",
   "block.bathroom.inky_moss_stone": "Cobblestone moussue d'encre",
+  "block.bathroom.yopore": "Yopore",
 
   "item.bathroom.bathroom_critter": "Bestiole de bain",
   "item.bathroom.splendor_critter": "Bestiole de splendeur",
+  "item.bathroom.yoper": "Yopeur",
   "item.bathroom.gummies": "Gummies",
-  "item.bathroom.worms_in_dirt": "Vers dans la saleté"
+  "item.bathroom.worms_in_dirt": "Vers dans la saleté",
+
+  "advancements.bathroom.root.title": "Blocs de bain",
+  "advancements.bathroom.root.description": "Obtenez de tuilebain brute",
+  "advancements.bathroom.bathroom.title": "Bienvenue dans la salle de bains",
+  "advancements.bathroom.bathroom.description": "Craftez de tuiles de bain",
+  "advancements.bathroom.sliptile.title": "Entrez dans le Slip",
+  "advancements.bathroom.sliptile.description": "Craftez les glissetuiles",
+  "advancements.bathroom.mixed.title": "Dames de bain",
+  "advancements.bathroom.mixed.description": "Craftez les glissetuiles mixtes",
+  "advancements.bathroom.bricks.title": "LES BRIQUES DE MINECRAFT!",
+  "advancements.bathroom.bricks.description": "Craftez des briques mixtes",
+  "advancements.bathroom.gummy.title": "Le 13 novembre",
+  "advancements.bathroom.gummy.description": "Craftez des gummies",
+  "advancements.bathroom.worm.title": "Rampant avec la saleté",
+  "advancements.bathroom.worm.description": "Craftez vers dans la saleté",
+  "advancements.bathroom.critter.title": "Latrinalia divine",
+  "advancements.bathroom.critter.description": "Donnez forme à une bestiole de splendeur",
+  "advancements.bathroom.splendor.title": "L'esprit de Melondeau",
+  "advancements.bathroom.splendor.description": "Donnez forme à une bestiole de splendeur",
+  "advancements.bathroom.yoper.title": "L'air crépite de liberté",
+  "advancements.bathroom.yoper.description": "Obtenez un yopeur"
 }

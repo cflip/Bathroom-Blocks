@@ -1,0 +1,35 @@
+{
+  "parent": "bathroom:root",
+  "display": {
+    "icon": {
+      "item": "bathroom:bathroom_critter"
+    },
+    "title": {
+      "translate": "advancements.bathroom.critter.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.critter.description"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "craft_bathroom_critter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:bathroom_critter"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_bathroom_critter"
+    ]
+  ]
+}

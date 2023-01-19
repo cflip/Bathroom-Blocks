@@ -1,0 +1,35 @@
+{
+  "parent": "bathroom:root",
+  "display": {
+    "icon": {
+      "item": "bathroom:yoper"
+    },
+    "title": {
+      "translate": "advancements.bathroom.yoper.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.yoper.description"
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "criteria": {
+    "get_yoper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:yoper"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_yoper"
+    ]
+  ]
+}

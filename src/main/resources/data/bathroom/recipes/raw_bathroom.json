@@ -1,18 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "minecraft:prismarine_shard"
-    },
-    "C": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:diorite"
     }
-  },
-  "pattern": [
-    "#C",
-    "C#"
   ],
   "result": {
+    "count": 4,
     "item": "bathroom:raw_bathroom"
   }
 }

@@ -18,6 +18,7 @@
         ]
       }
     },
+
     "has_wood_slab": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -27,8 +28,8 @@
               }
             ]
           }
-      }
     },
+
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -36,6 +37,7 @@
       }
     }
   },
+
   "requirements": [
     [
       "has_white_wool",

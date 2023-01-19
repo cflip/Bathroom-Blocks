@@ -1,0 +1,35 @@
+{
+  "parent": "bathroom:critter",
+  "display": {
+    "icon": {
+      "item": "bathroom:splendor_critter"
+    },
+    "title": {
+      "translate": "advancements.bathroom.splendor.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.splendor.description"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "criteria": {
+    "craft_splendor_critter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:splendor_critter"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_splendor_critter"
+    ]
+  ]
+}

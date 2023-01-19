@@ -1,0 +1,35 @@
+{
+  "parent": "bathroom:gummies",
+  "display": {
+    "icon": {
+      "item": "bathroom:worms_in_dirt"
+    },
+    "title": {
+      "translate": "advancements.bathroom.worm.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.worm.description"
+    },
+    "frame": "goal",
+    "hidden": false
+  },
+  "criteria": {
+    "craft_worms": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:worms_in_dirt"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_worms"
+    ]
+  ]
+}

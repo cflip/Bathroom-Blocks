@@ -1,0 +1,34 @@
+{
+  "parent": "bathroom:root",
+  "display": {
+    "icon": {
+      "item": "bathroom:bathroom_tiles"
+    },
+    "title": {
+      "translate": "advancements.bathroom.bathroom.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.bathroom.description"
+    },
+    "hidden": false
+  },
+  "criteria": {
+    "craft_bathroom_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:bathroom_tiles"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_bathroom_tiles"
+    ]
+  ]
+}

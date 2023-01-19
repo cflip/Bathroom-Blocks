@@ -1,0 +1,33 @@
+{
+  "parent": "bathroom:root",
+  "display": {
+    "icon": {
+      "item": "bathroom:gummies"
+    },
+    "title": {
+      "translate": "advancements.bathroom.gummy.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.gummy.description"
+    }
+  },
+  "criteria": {
+    "craft_gummies": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:gummies"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_gummies"
+    ]
+  ]
+}

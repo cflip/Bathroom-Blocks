@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "bathroom:raw_bathroom"
+    },
+    "title": {
+      "translate": "advancements.bathroom.root.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.root.description"
+    },
+    "background": "bathroom:textures/gui/advancement_background.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_raw_bathroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:raw_bathroom"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_bathroom"
+    ]
+  ]
+}
