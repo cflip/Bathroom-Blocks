@@ -17,19 +17,15 @@ import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.BiomeKeys;
-import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 import java.util.Arrays;
-
 
 public class BathroomMod implements ModInitializer {
 	public static final FoodComponent GUMMIES_FOOD = new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build();
@@ -56,17 +52,17 @@ public class BathroomMod implements ModInitializer {
 	public static final Item WORMS_IN_DIRT = new StewItem(new FabricItemSettings().group(ItemGroup.FOOD).food(WORMS_IN_DIRT_FOOD));
 
 
-	public static final PaintingVariant MARKET = registerPainting("market", new PaintingVariant(16,16));
-	public static final PaintingVariant EEL = registerPainting("eel", new PaintingVariant(16,16));
-	public static final PaintingVariant DAMP = registerPainting("damp", new PaintingVariant(16,32));
-	public static final PaintingVariant HELLPIPE = registerPainting("hellpipe", new PaintingVariant(32,16));
+	public static final PaintingVariant MARKET = registerPainting("market", new PaintingVariant(16, 16));
+	public static final PaintingVariant EEL = registerPainting("eel", new PaintingVariant(16, 16));
+	public static final PaintingVariant DAMP = registerPainting("damp", new PaintingVariant(16, 32));
+	public static final PaintingVariant HELLPIPE = registerPainting("hellpipe", new PaintingVariant(32, 16));
 
 	private static PaintingVariant registerPainting(String name, PaintingVariant PaintingVariant) {
 		return Registry.register(Registry.PAINTING_VARIANT, new Identifier("bathroom", name), PaintingVariant);
 	}
 
-	// TODO: Add a spawn egg
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
+	public static Item PIG_CREEPER_SPAWN_EGG; // Must be initialized after PIG_CREEPER_ENTITY
 
 	private static final ConfiguredFeature<?, ?> RAW_BATHROOM_FEATURE = new ConfiguredFeature(
 			Feature.ORE,
@@ -134,6 +130,11 @@ public class BathroomMod implements ModInitializer {
 		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier("bathroom", "yopore_gen")));
 
 		PIG_CREEPER_ENTITY = Registry.register(Registry.ENTITY_TYPE, new Identifier("bathroom", "pig_creeper"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, PigCreeperEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).trackRangeBlocks(8).build());
+		FabricDefaultAttributeRegistry.register(PIG_CREEPER_ENTITY, PigCreeperEntity.createCreeperAttributes());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);
+
+		// Initialize the item now that the entity type has been defined
+		PIG_CREEPER_SPAWN_EGG = new SpawnEggItem(PIG_CREEPER_ENTITY, 0xf0a5a2, 0, new FabricItemSettings().group(ItemGroup.MISC));
+		Registry.register(Registry.ITEM, new Identifier("bathroom", "pig_creeper_spawn_egg"), PIG_CREEPER_SPAWN_EGG);
 	}
 }

@@ -17,6 +17,9 @@
     "item.bathroom.yoper": "Yoper",
     "item.bathroom.gummies": "Gummies",
     "item.bathroom.worms_in_dirt": "Worms in Dirt",
+    "item.bathroom.pig_creeper_spawn_egg": "Pig Creeper Spawn Egg",
+
+    "entity.bathroom.mushlet": "Mushlet",
 
     "advancements.bathroom.root.title": "Bathroom Blocks",
     "advancements.bathroom.root.description": "Obtain raw bathroom",
