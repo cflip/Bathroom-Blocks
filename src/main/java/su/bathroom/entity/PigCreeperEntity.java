@@ -1,4 +1,4 @@
-package su.bathroom;
+package su.bathroom.entity;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
