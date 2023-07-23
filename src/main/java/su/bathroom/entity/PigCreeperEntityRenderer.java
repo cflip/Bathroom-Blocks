@@ -1,4 +1,4 @@
-package su.bathroom;
+package su.bathroom.entity;
 
 import net.minecraft.client.render.entity.CreeperEntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;

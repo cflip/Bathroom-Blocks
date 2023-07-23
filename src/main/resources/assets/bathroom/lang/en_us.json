@@ -1,4 +1,6 @@
 {
+    "itemGroup.bathroom": "Bathroom Blocks",
+
     "block.bathroom.bathroom_tiles": "Bathroom Tiles",
     "block.bathroom.raw_bathroom": "Raw Bathroom",
     "block.bathroom.sliptiles": "Sliptiles",

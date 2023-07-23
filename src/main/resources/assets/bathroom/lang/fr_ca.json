@@ -1,4 +1,6 @@
 {
+  "itemGroup.bathroom": "Blocs de bain",
+
   "block.bathroom.bathroom_tiles": "Tuiles de bain",
   "block.bathroom.raw_bathroom": "Tuilebain brute",
   "block.bathroom.sliptiles": "Glissetuiles",

@@ -3,7 +3,15 @@
   "id": "bathroom",
   "version": "${version}",
   "name": "Bathroom Mod",
-  "description": "",
+  "description": "Decorative blocks and miscellaneous features",
+  "authors": [
+    "Wawful947",
+    "jusipat"
+  ],
+  "contact": {
+    "homepage": "https://legacy.curseforge.com/minecraft/mc-mods/bathroom-blocks",
+    "sources": "https://github.com/Kjolt947/Bathroom-Blocks"
+  },
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -16,7 +24,7 @@
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": "1.20.x",
     "java": ">=17"
   }
 }
