@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -21,10 +22,11 @@ public class BathroomBlocks {
     public static final Block SLIPBRICKS = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.5F, 6.0F).sounds(BlockSoundGroup.METAL));
     public static final Block DARK_SLIPBRICKS = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.5F, 6.0F).sounds(BlockSoundGroup.METAL));
     public static final Block MIXED_BRICKS = new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(2F, 6.0F));
+    public static final SlabBlock MIXED_BRICKS_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).requiresTool().strength(2F, 6.0F));
     public static final Block INKY_COBBLESTONE = new Block(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(2F, 6.0F));
+    public static final SlabBlock INKY_COBBLESTONE_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(2F, 6.0F));
     public static final Block INKY_MOSS_STONE = new Block(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(2F, 6.0F));
     public static final Block YOPORE = new Block(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(3F, 3.0F));
-
     public static final Block INSULATION = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL).strength(1.2F, 3.0F));
 
 
@@ -46,11 +48,14 @@ public class BathroomBlocks {
         Registry.register(Registries.BLOCK, new Identifier("bathroom", "dark_slipbricks"), DARK_SLIPBRICKS);
         Registry.register(Registries.ITEM, new Identifier("bathroom", "dark_slipbricks"), new BlockItem(DARK_SLIPBRICKS, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier("bathroom", "mixed_bricks"), MIXED_BRICKS);
+        Registry.register(Registries.ITEM, new Identifier("bathroom", "mixed_bricks"), new BlockItem(MIXED_BRICKS, new Item.Settings()));
+        Registry.register(Registries.BLOCK, new Identifier("bathroom", "mixed_bricks_slab"), MIXED_BRICKS_SLAB);
         Registry.register(Registries.BLOCK, new Identifier("bathroom", "yopore"), YOPORE);
         Registry.register(Registries.ITEM, new Identifier("bathroom", "yopore"), new BlockItem(YOPORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, new Identifier("bathroom", "mixed_bricks"), new BlockItem(MIXED_BRICKS, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier("bathroom", "inky_cobblestone"), INKY_COBBLESTONE);
         Registry.register(Registries.ITEM, new Identifier("bathroom", "inky_cobblestone"), new BlockItem(INKY_COBBLESTONE, new Item.Settings()));
+        Registry.register(Registries.BLOCK, new Identifier("bathroom", "inky_cobblestone_slab"), INKY_COBBLESTONE_SLAB);
+        Registry.register(Registries.ITEM, new Identifier("bathroom", "inky_cobblestone_slab"), new BlockItem(INKY_COBBLESTONE_SLAB, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier("bathroom", "inky_moss_stone"), INKY_MOSS_STONE);
         Registry.register(Registries.ITEM, new Identifier("bathroom", "inky_moss_stone"), new BlockItem(INKY_MOSS_STONE, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier("bathroom", "insulation"), INSULATION);

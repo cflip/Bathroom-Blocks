@@ -36,9 +36,8 @@ public class BathroomMod implements ModInitializer {
 	}
 
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
-	public static Item PIG_CREEPER_SPAWN_EGG; // Must be initialized after PIG_CREEPER_ENTITY
 
-	// TODO, I don't know what this does, but it doesn't work in 1.20!
+	// LEAVE IT THE FUCK ALONE
 
 	//private static final ConfiguredFeature<?, ?> RAW_BATHROOM_FEATURE = new ConfiguredFeature(
 	//		Feature.ORE,
@@ -68,10 +67,6 @@ public class BathroomMod implements ModInitializer {
 		PIG_CREEPER_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "pig_creeper"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, PigCreeperEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).trackRangeBlocks(8).build());
 		FabricDefaultAttributeRegistry.register(PIG_CREEPER_ENTITY, PigCreeperEntity.createCreeperAttributes());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);
-
-		// Initialize the item now that the entity type has been defined
-		PIG_CREEPER_SPAWN_EGG = new SpawnEggItem(PIG_CREEPER_ENTITY, 0xf0a5a2, 0, new FabricItemSettings());
-		Registry.register(Registries.ITEM, new Identifier("bathroom", "pig_creeper_spawn_egg"), PIG_CREEPER_SPAWN_EGG);
 
 		BathroomBlocks.registerBlocks();
 		BathroomItems.registerItems();
