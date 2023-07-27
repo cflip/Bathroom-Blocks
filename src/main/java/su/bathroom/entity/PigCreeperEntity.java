@@ -9,13 +9,13 @@ import net.minecraft.world.World;
 
 public class PigCreeperEntity extends CreeperEntity {
 
-    public PigCreeperEntity(EntityType<? extends CreeperEntity> entityType, World world) {
-        super(entityType, world);
-    }
+	public PigCreeperEntity(EntityType<? extends CreeperEntity> entityType, World world) {
+		super(entityType, world);
+	}
 
-    @Override
-    protected void dropEquipment(DamageSource source, int lootingMultiplier, boolean allowDrops) {
-        super.dropEquipment(source, lootingMultiplier, allowDrops);
-        dropStack(new ItemStack(Items.PORKCHOP, 12));
-    }
+	@Override
+	protected void dropEquipment(DamageSource source, int lootingMultiplier, boolean allowDrops) {
+		super.dropEquipment(source, lootingMultiplier, allowDrops);
+		dropStack(new ItemStack(Items.PORKCHOP, 12));
+	}
 }
