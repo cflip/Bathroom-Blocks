@@ -8,9 +8,8 @@ import su.bathroom.entity.PigCreeperEntityRenderer;
 
 @Environment(EnvType.CLIENT)
 public class BathroomModClient implements ClientModInitializer {
-    @Override
-    public void onInitializeClient() {
-        EntityRendererRegistry.register(BathroomMod.PIG_CREEPER_ENTITY, PigCreeperEntityRenderer::new);
-
-    }
+	@Override
+	public void onInitializeClient() {
+		EntityRendererRegistry.register(BathroomMod.PIG_CREEPER_ENTITY, PigCreeperEntityRenderer::new);
+	}
 }

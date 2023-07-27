@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:mixed_bricks_slab",
+      "bathroom:mixed_bricks_slab_from_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_mixed_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:mixed_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:mixed_bricks_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mixed_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

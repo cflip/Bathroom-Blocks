@@ -6,14 +6,14 @@ import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.util.Identifier;
 
 public class PigCreeperEntityRenderer extends CreeperEntityRenderer {
-    private static final Identifier TEXTURE = new Identifier("bathroom",  "textures/entity/pig_creeper.png");
+	private static final Identifier TEXTURE = new Identifier("bathroom", "textures/entity/pig_creeper.png");
 
-    public PigCreeperEntityRenderer(EntityRendererFactory.Context context) {
-        super(context);
-    }
+	public PigCreeperEntityRenderer(EntityRendererFactory.Context context) {
+		super(context);
+	}
 
-    @Override
-    public Identifier getTexture(CreeperEntity creeperEntity) {
-        return TEXTURE;
-    }
+	@Override
+	public Identifier getTexture(CreeperEntity creeperEntity) {
+		return TEXTURE;
+	}
 }
