@@ -20,8 +20,10 @@ public class BathroomItemGroup {
 				entries.add(BathroomBlocks.SLIPBRICKS);
 				entries.add(BathroomBlocks.DARK_SLIPBRICKS);
 				entries.add(BathroomBlocks.MIXED_BRICKS);
+				entries.add(BathroomBlocks.MIXED_BRICKS_SLAB);
 				entries.add(BathroomBlocks.INSULATION);
 				entries.add(BathroomBlocks.INKY_COBBLESTONE);
+				entries.add(BathroomBlocks.INKY_COBBLESTONE_SLAB);
 				entries.add(BathroomBlocks.INKY_MOSS_STONE);
 				entries.add(BathroomBlocks.YOPORE);
 				entries.add(BathroomItems.YOPER);

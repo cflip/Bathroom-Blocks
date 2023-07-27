@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:inky_cobblestone_slab",
+      "bathroom:inky_cobblestone_slab_from_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_inky_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:inky_cobblestone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:inky_cobblestone_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_inky_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}
