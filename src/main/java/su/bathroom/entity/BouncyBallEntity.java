@@ -20,7 +20,7 @@ import su.bathroom.registry.BathroomItems;
 public class BouncyBallEntity extends ThrownItemEntity {
     private static final float RESTITUTION = 0.90f;    // How much velocity the ball retains when it bounces off a surface
     private static final float DEATH_VELOCITY = 0.01f; // The velocity at which this entity turns into an item
-    private static final int IMPACT_FIRE_SECONDS = 5;  // How long entities hit by a burning ball will be set on fire for
+    private static final int IMPACT_FIRE_SECONDS = 8;  // How long entities hit by a burning ball will be set on fire for
 
     public BouncyBallEntity(EntityType<? extends BouncyBallEntity> entityType, World world) {
         super(entityType, world);
@@ -80,7 +80,7 @@ public class BouncyBallEntity extends ThrownItemEntity {
             float spreadZ = MathHelper.cos(angle) * spread;
             world.addParticle(getParticleEffect(), getX() + spreadX, getY(), getZ() + spreadZ, 0.0f, 0.0f, 0.0f);
         }
-        world.playSound(null, getX(), getY(), getZ(), SoundEvents.ENTITY_SLIME_JUMP_SMALL, SoundCategory.NEUTRAL, 6.0f, 1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        world.playSound(null, getX(), getY(), getZ(), SoundEvents.ENTITY_SLIME_JUMP_SMALL, SoundCategory.NEUTRAL, 3.0f, 1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
     }
 
     protected ParticleEffect getParticleEffect() {

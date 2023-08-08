@@ -27,6 +27,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomBlocks.INKY_MOSS_STONE);
 				entries.add(BathroomBlocks.YOPORE);
 				entries.add(BathroomItems.YOPER);
+				entries.add(BathroomItems.BOUNCY_BALL);
 				entries.add(BathroomItems.GUMMIES);
 				entries.add(BathroomItems.WORMS_IN_DIRT);
 				entries.add(BathroomItems.BATHROOM_CRITTER);
