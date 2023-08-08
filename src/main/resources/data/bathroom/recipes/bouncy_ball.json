@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:purple_dye"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SPS",
+    " S "
+  ],
+  "result": {
+    "count": 2,
+    "item": "bathroom:bouncy_ball"
+  }
+}

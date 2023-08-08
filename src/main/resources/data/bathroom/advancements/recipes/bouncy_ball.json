@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:bouncy_ball"
+    ]
+  },
+  "criteria": {
+    "has_purple_dye": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:purple_dye"
+            ]
+          }
+        ]
+      }
+    },
+    "has_slime": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:slime_ball"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:bouncy_ball"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_purple_dye",
+      "has_slime",
+      "has_the_recipe"
+    ]
+  ]
+}
