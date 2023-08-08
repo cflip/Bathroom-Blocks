@@ -32,6 +32,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.WORMS_IN_DIRT);
 				entries.add(BathroomItems.BATHROOM_CRITTER);
 				entries.add(BathroomItems.SPLENDOR_CRITTER);
+				entries.add(BathroomItems.MUSHLET_SPAWN_EGG);
 				entries.add(BathroomItems.PIG_CREEPER_SPAWN_EGG);
 			})
 			.build();
