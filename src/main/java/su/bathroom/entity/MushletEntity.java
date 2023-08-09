@@ -1,6 +1,5 @@
 package su.bathroom.entity;
 
-import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -23,7 +22,6 @@ import su.bathroom.BathroomMod;
 
 public class MushletEntity extends AnimalEntity {
     private static final Ingredient BREEDING_INGREDIENT = Ingredient.ofItems(Items.BROWN_MUSHROOM_BLOCK, Items.RED_MUSHROOM_BLOCK, Items.NETHER_WART_BLOCK, Items.WARPED_WART_BLOCK);
-    public final AnimationState idlingAnimationState = new AnimationState();
 
     public MushletEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -31,14 +29,6 @@ public class MushletEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createMushletAttributes() {
         return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.16);
-    }
-
-    @Override
-    public void tick() {
-        if (this.getWorld().isClient) {
-            this.idlingAnimationState.startIfNotRunning(this.age);
-        }
-        super.tick();
     }
 
     @Override
