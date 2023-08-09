@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -13,6 +14,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.BiomeKeys;
+import su.bathroom.advancement.criterion.BouncyBallFireCriterion;
 import su.bathroom.entity.BouncyBallEntity;
 import su.bathroom.entity.MushletEntity;
 import su.bathroom.entity.PigCreeperEntity;
@@ -28,6 +30,8 @@ public class BathroomMod implements ModInitializer {
 	public static EntityType<MushletEntity> MUSHLET_ENTITY;
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
 	public static EntityType<BouncyBallEntity> BOUNCY_BALL_ENTITY;
+
+	public static BouncyBallFireCriterion BOUNCY_BALL_FIRE_CRITERION;
 
 	// LEAVE IT THE FUCK ALONE
 
@@ -58,6 +62,8 @@ public class BathroomMod implements ModInitializer {
 		MUSHLET_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "mushlet"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushletEntity::new).dimensions(new EntityDimensions(0.6F, 0.8F, true)).build());
 		PIG_CREEPER_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "pig_creeper"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, PigCreeperEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
 		BOUNCY_BALL_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "bouncy_ball"), FabricEntityTypeBuilder.create(SpawnGroup.MISC, (EntityType.EntityFactory<BouncyBallEntity>) BouncyBallEntity::new).dimensions(new EntityDimensions(0.25f, 0.25f, true)).trackedUpdateRate(16).build());
+
+		BOUNCY_BALL_FIRE_CRITERION = Criteria.register(new BouncyBallFireCriterion());
 
 		FabricDefaultAttributeRegistry.register(MUSHLET_ENTITY, MushletEntity.createMushletAttributes());
 		FabricDefaultAttributeRegistry.register(PIG_CREEPER_ENTITY, PigCreeperEntity.createCreeperAttributes());
