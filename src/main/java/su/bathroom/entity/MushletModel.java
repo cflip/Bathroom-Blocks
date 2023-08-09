@@ -4,17 +4,16 @@ package su.bathroom.entity;// Made with Blockbench 4.8.1
 
 
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
-import net.minecraft.client.util.math.MatrixStack;
 import su.bathroom.registry.BathroomAnimations;
 
 public class MushletModel extends SinglePartEntityModel<MushletEntity> {
     private final ModelPart root;
+    private final ModelPart head;
 
     public MushletModel(ModelPart root) {
         this.root = root.getChild("root");
+        this.head = this.root.getChild("bone");
     }
 
     public static TexturedModelData getTexturedModelData() {
@@ -33,7 +32,9 @@ public class MushletModel extends SinglePartEntityModel<MushletEntity> {
     @Override
     public void setAngles(MushletEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.getPart().traverse().forEach(ModelPart::resetTransform);
-        this.updateAnimation(entity.idlingAnimationState, BathroomAnimations.MUSHLET_SQUASH, ageInTicks);
+        this.head.yaw = netHeadYaw * 0.017453292F;
+        this.head.pitch = headPitch * 0.017453292F;
+        this.animateMovement(BathroomAnimations.MUSHLET_SQUASH, limbSwing, limbSwingAmount, 2.5F, 100.0F);
     }
 
     @Override
