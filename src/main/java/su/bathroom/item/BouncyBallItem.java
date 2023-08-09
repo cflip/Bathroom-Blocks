@@ -23,7 +23,7 @@ public class BouncyBallItem extends Item {
         if (!world.isClient()) {
             BouncyBallEntity bouncyBall = new BouncyBallEntity(world, user);
             bouncyBall.setItem(itemStack);
-            bouncyBall.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 0.8f, 1.0f);
+            bouncyBall.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 1.0f);
             world.spawnEntity(bouncyBall);
         }
 
