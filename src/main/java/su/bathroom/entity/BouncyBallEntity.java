@@ -5,10 +5,10 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
@@ -88,8 +88,11 @@ public class BouncyBallEntity extends ThrownItemEntity {
         setVelocity(getVelocity().multiply(-RESTITUTION));
 
         entityHitResult.getEntity().damage(getDamageSources().thrown(this, getOwner()), 0);
-        if (isOnFire())
+        if (isOnFire()) {
             entityHitResult.getEntity().setOnFireFor(IMPACT_FIRE_SECONDS);
+            if (getOwner() instanceof ServerPlayerEntity)
+                BathroomMod.BOUNCY_BALL_FIRE_CRITERION.trigger((ServerPlayerEntity) getOwner());
+        }
     }
 
     @Override
