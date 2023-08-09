@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import su.bathroom.BathroomMod;
 import su.bathroom.entity.BouncyBallEntity;
 import su.bathroom.item.BouncyBallItem;
+import su.bathroom.item.MushspawnItem;
 
 public class BathroomItems {
 	public static final Item BATHROOM_CRITTER = new Item(new Item.Settings());
@@ -24,7 +25,7 @@ public class BathroomItems {
 	public static final Item YOPER = new Item(new Item.Settings());
 	public static final Item GUMMIES = new Item(new FabricItemSettings().food(BathroomMod.GUMMIES_FOOD));
 	public static final Item WORMS_IN_DIRT = new StewItem(new FabricItemSettings().food(BathroomMod.WORMS_IN_DIRT_FOOD));
-	public static final Item MUSHSPAWN = new Item(new Item.Settings());
+	public static final Item MUSHSPAWN = new MushspawnItem(new Item.Settings());
 	public static final Item MUSHLET_SPAWN_EGG = new SpawnEggItem(BathroomMod.MUSHLET_ENTITY, 0x00f15d, 0xffffff, new Item.Settings());
 	public static final Item PIG_CREEPER_SPAWN_EGG = new SpawnEggItem(BathroomMod.PIG_CREEPER_ENTITY, 0xFF9B86, 0x503D39, new Item.Settings());
 	public static final Item BOUNCY_BALL = new BouncyBallItem(new Item.Settings());

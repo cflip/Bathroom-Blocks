@@ -62,7 +62,7 @@ public class BouncyBallEntity extends ThrownItemEntity {
             world.addParticle(PARTICLE_EFFECT, getX() + spreadX, getY(), getZ() + spreadZ, particleVelocity.x, particleVelocity.y, particleVelocity.z);
         }
 
-        float soundVolume = MathHelper.abs((float)Math.log(getVelocity().length()));
+        float soundVolume = (float) Math.log(Math.abs(getVelocity().length()) + 1);
         world.playSound(null, getX(), getY(), getZ(), SoundEvents.ENTITY_SLIME_JUMP_SMALL, SoundCategory.NEUTRAL, soundVolume, 1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
     }
 
