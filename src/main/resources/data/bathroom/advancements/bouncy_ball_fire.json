@@ -10,7 +10,8 @@
     "description": {
       "translate": "advancements.bathroom.bouncy_ball_fire.description"
     },
-    "hidden": false
+    "frame": "challenge",
+    "hidden": true
   },
   "criteria": {
     "craft_bathroom_tiles": {

@@ -10,7 +10,7 @@
     "description": {
       "translate": "advancements.bathroom.splendor.description"
     },
-    "frame": "challenge",
+    "frame": "goal",
     "hidden": true
   },
   "criteria": {

@@ -1,0 +1,60 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:mushspawn"
+    ]
+  },
+  "criteria": {
+    "has_mushroom_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:mushroom_stew"
+            ]
+          }
+        ]
+      }
+    },
+    "has_gummies": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:gummies"
+            ]
+          }
+        ]
+      }
+    },
+    "has_ghast_tear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:ghast_tear"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:mushspawn"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gummies",
+      "has_mushroom_stew",
+      "has_ghast_tear",
+      "has_the_recipe"
+    ]
+  ]
+}
