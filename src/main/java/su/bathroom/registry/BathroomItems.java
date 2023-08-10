@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import su.bathroom.BathroomMod;
 import su.bathroom.entity.BouncyBallEntity;
 import su.bathroom.item.BouncyBallItem;
+import su.bathroom.item.FertilizerBagItem;
 import su.bathroom.item.MushspawnItem;
 
 public class BathroomItems {
@@ -29,6 +30,7 @@ public class BathroomItems {
 	public static final Item MUSHLET_SPAWN_EGG = new SpawnEggItem(BathroomMod.MUSHLET_ENTITY, 0x00f15d, 0xffffff, new Item.Settings());
 	public static final Item PIG_CREEPER_SPAWN_EGG = new SpawnEggItem(BathroomMod.PIG_CREEPER_ENTITY, 0xFF9B86, 0x503D39, new Item.Settings());
 	public static final Item BOUNCY_BALL = new BouncyBallItem(new Item.Settings());
+	public static final Item FERTILIZER_BAG = new FertilizerBagItem(new Item.Settings().maxCount(1).maxDamage(16));
 
 	public static void registerItems() {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bathroom_critter"), BATHROOM_CRITTER);
@@ -40,6 +42,7 @@ public class BathroomItems {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "mushlet_spawn_egg"), MUSHLET_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "pig_creeper_spawn_egg"), PIG_CREEPER_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bouncy_ball"), BOUNCY_BALL);
+		Registry.register(Registries.ITEM, new Identifier("bathroom", "fertilizer_bag"), FERTILIZER_BAG);
 
 		DispenserBlock.registerBehavior(BOUNCY_BALL, new ProjectileDispenserBehavior() {
 			@Override
