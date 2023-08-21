@@ -47,7 +47,7 @@ public class BathroomItems {
 		DispenserBlock.registerBehavior(BOUNCY_BALL, new ProjectileDispenserBehavior() {
 			@Override
 			protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
-				return Util.make(new BouncyBallEntity(world, position.getX(), position.getY(), position.getZ()), bouncyBallEntity -> bouncyBallEntity.setItem(stack));
+				return Util.make(new BouncyBallEntity(world, position.getX(), position.getY(), position.getZ(), true), bouncyBallEntity -> bouncyBallEntity.setItem(stack));
 			}
 		});
 	}
