@@ -36,6 +36,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.MUSHSPAWN);
 				entries.add(BathroomItems.MUSHLET_SPAWN_EGG);
 				entries.add(BathroomItems.PIG_CREEPER_SPAWN_EGG);
+				entries.add(BathroomItems.BALL_GOLEM_SPAWN_EGG);
 			})
 			.build();
 
