@@ -9,12 +9,14 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.BiomeKeys;
 import su.bathroom.advancement.criterion.BouncyBallFireCriterion;
+import su.bathroom.entity.BallGolemEntity;
 import su.bathroom.entity.BouncyBallEntity;
 import su.bathroom.entity.MushletEntity;
 import su.bathroom.entity.PigCreeperEntity;
@@ -30,6 +32,7 @@ public class BathroomMod implements ModInitializer {
 	public static EntityType<MushletEntity> MUSHLET_ENTITY;
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
 	public static EntityType<BouncyBallEntity> BOUNCY_BALL_ENTITY;
+	public static EntityType<BallGolemEntity> BALL_GOLEM_ENTITY;
 
 	public static BouncyBallFireCriterion BOUNCY_BALL_FIRE_CRITERION;
 
@@ -62,11 +65,13 @@ public class BathroomMod implements ModInitializer {
 		MUSHLET_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "mushlet"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushletEntity::new).dimensions(new EntityDimensions(0.6F, 0.8F, true)).build());
 		PIG_CREEPER_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "pig_creeper"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, PigCreeperEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
 		BOUNCY_BALL_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "bouncy_ball"), FabricEntityTypeBuilder.create(SpawnGroup.MISC, (EntityType.EntityFactory<BouncyBallEntity>) BouncyBallEntity::new).dimensions(new EntityDimensions(0.25f, 0.25f, true)).trackedUpdateRate(16).build());
+		BALL_GOLEM_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "ball_golem"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BallGolemEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
 
 		BOUNCY_BALL_FIRE_CRITERION = Criteria.register(new BouncyBallFireCriterion());
 
 		FabricDefaultAttributeRegistry.register(MUSHLET_ENTITY, MushletEntity.createMushletAttributes());
 		FabricDefaultAttributeRegistry.register(PIG_CREEPER_ENTITY, PigCreeperEntity.createCreeperAttributes());
+		FabricDefaultAttributeRegistry.register(BALL_GOLEM_ENTITY, SnowGolemEntity.createSnowGolemAttributes());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);
 
 		BathroomBlocks.registerBlocks();

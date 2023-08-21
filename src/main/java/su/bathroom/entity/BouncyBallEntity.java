@@ -27,16 +27,20 @@ public class BouncyBallEntity extends ThrownItemEntity {
 
     private static final ParticleEffect PARTICLE_EFFECT = new ItemStackParticleEffect(ParticleTypes.ITEM, BathroomItems.BOUNCY_BALL.getDefaultStack());
 
+    private boolean dropItem = false;
+
     public BouncyBallEntity(EntityType<? extends BouncyBallEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public BouncyBallEntity(World world, LivingEntity owner) {
+    public BouncyBallEntity(World world, LivingEntity owner, boolean dropItem) {
         super(BathroomMod.BOUNCY_BALL_ENTITY, owner, world);
+        this.dropItem = dropItem;
     }
 
-    public BouncyBallEntity(World world, double x, double y, double z) {
+    public BouncyBallEntity(World world, double x, double y, double z, boolean dropItem) {
         super(BathroomMod.BOUNCY_BALL_ENTITY, x, y, z, world);
+        this.dropItem = dropItem;
     }
 
     @Override
@@ -47,8 +51,10 @@ public class BouncyBallEntity extends ThrownItemEntity {
         super.onCollision(hitResult);
 
         if (getVelocity().length() < DEATH_VELOCITY && !world.isClient()) {
-            ItemEntity itemEntity = new ItemEntity(world, getX(), getY(), getZ(), getDefaultItem().getDefaultStack());
-            world.spawnEntity(itemEntity);
+            if (dropItem) {
+                ItemEntity itemEntity = new ItemEntity(world, getX(), getY(), getZ(), getDefaultItem().getDefaultStack());
+                world.spawnEntity(itemEntity);
+            }
             world.sendEntityStatus(this, (byte)3);
             discard();
         }

@@ -24,11 +24,13 @@
     "item.bathroom.mushspawn": "Mushspawn",
     "item.bathroom.mushlet_spawn_egg": "Mushlet Spawn Egg",
     "item.bathroom.pig_creeper_spawn_egg": "Pig Creeper Spawn Egg",
+    "item.bathroom.ball_golem_spawn_egg": "Ball Golem Spawn Egg",
     "item.bathroom.bouncy_ball": "Bouncy Ball",
     "item.bathroom.fertilizer_bag": "Fertilizer Bag",
 
     "entity.bathroom.pig_creeper": "Pig Creeper",
     "entity.bathroom.mushlet": "Mushlet",
+    "entity.bathroom.ball_golem": "Ball Golem",
 
     "advancements.bathroom.root.title": "Bathroom Blocks",
     "advancements.bathroom.root.description": "Obtain raw bathroom",
