@@ -24,11 +24,14 @@
     "item.bathroom.mushspawn": "Toadstoollingmake",
     "item.bathroom.mushlet_spawn_egg": "Toadstoolling Making Ey",
     "item.bathroom.pig_creeper_spawn_egg": "Pig Creeper Making Ey",
+    "item.bathroom.ball_golem_spawn_egg": "Ball Livenedman Making Ey",
     "item.bathroom.bouncy_ball": "Bouncy Ball",
     "item.bathroom.fertilizer_bag": "Loam Bag",
+    "item.bathroom.compact_ball_golem": "Clised Ball Golem",
 
     "entity.bathroom.pig_creeper": "Pig Creeper",
     "entity.bathroom.mushlet": "Toadstoolling",
+    "entity.bathroom.ball_golem": "Ball Livenedman",
 
     "advancements.bathroom.root.title": "Bathroom Cleats",
     "advancements.bathroom.root.description": "Get raw bathroom",

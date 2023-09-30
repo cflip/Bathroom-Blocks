@@ -22,11 +22,14 @@
   "item.bathroom.mushspawn": "Champiouef",
   "item.bathroom.mushlet_spawn_egg": "Oeuf spawneur de Champichiot",
   "item.bathroom.pig_creeper_spawn_egg": "Oeuf spawneur de Creeper Cochon",
+  "item.bathroom.ball_golem_spawn_egg": "Oeuf spawneur de Golem de balle",
   "item.bathroom.bouncy_ball": "Balle rebondissante",
   "item.bathroom.fertilizer_bag": "Sac d'engrais",
+  "item.bathroom.compact_ball_golem": "Golem de balle compacte",
 
   "entity.bathroom.pig_creeper": "Creeper Cochon",
   "entity.bathroom.mushlet": "Champichiot",
+  "entity.bathroom.ball_golem": "Golem de balle",
 
   "advancements.bathroom.root.title": "Blocs de bain",
   "advancements.bathroom.root.description": "Obtenez de tuilebain brute",

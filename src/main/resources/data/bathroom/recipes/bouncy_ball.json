@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "P": {
-      "item": "minecraft:purple_dye"
+      "item": "minecraft:dried_kelp"
     },
     "S": {
       "item": "minecraft:slime_ball"
@@ -14,7 +14,7 @@
     " S "
   ],
   "result": {
-    "count": 2,
+    "count": 1,
     "item": "bathroom:bouncy_ball"
   }
 }

@@ -32,6 +32,7 @@ public class BathroomItems {
 	public static final Item BALL_GOLEM_SPAWN_EGG = new SpawnEggItem(BathroomMod.BALL_GOLEM_ENTITY, 0xCD82D7, 0x894F91, new Item.Settings());
 	public static final Item BOUNCY_BALL = new BouncyBallItem(new Item.Settings());
 	public static final Item FERTILIZER_BAG = new FertilizerBagItem(new Item.Settings().maxCount(1).maxDamage(16));
+	public static final Item COMPACT_BALL_GOLEM = new SpawnEggItem(BathroomMod.BALL_GOLEM_ENTITY, 16777215, 16777215, new FabricItemSettings());
 
 	public static void registerItems() {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bathroom_critter"), BATHROOM_CRITTER);
@@ -45,6 +46,7 @@ public class BathroomItems {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "ball_golem_spawn_egg"), BALL_GOLEM_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bouncy_ball"), BOUNCY_BALL);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "fertilizer_bag"), FERTILIZER_BAG);
+		Registry.register(Registries.ITEM, new Identifier("bathroom", "ball_golem_spawn_egg"), COMPACT_BALL_GOLEM);
 
 		DispenserBlock.registerBehavior(BOUNCY_BALL, new ProjectileDispenserBehavior() {
 			@Override
