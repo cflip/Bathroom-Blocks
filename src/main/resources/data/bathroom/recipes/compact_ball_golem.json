@@ -2,25 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "P": {
-      "item": "minecraft:pumpkin"
+      "item": "minecraft:carved_pumpkin"
     },
-    "G": {
-      "item": "minecraft:glass"
+    "I": {
+      "item": "minecraft:iron_block"
     },
     "B": {
       "item": "bathroom:bouncy_ball"
     },
-    "I": {
-      "item": "minecraft:block_of_iron"
+    "G": {
+      "item": "minecraft:glass"
     }
   },
   "pattern": [
-    " G ",
+    " P ",
     "BGB",
     " I "
   ],
   "result": {
-    "count": 1,
-    "item": "bathroom:bouncy_ball"
+    "item": "bathroom:compact_ball_golem"
   }
 }

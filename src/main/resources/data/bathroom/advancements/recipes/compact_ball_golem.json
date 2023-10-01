@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:bouncy_ball"
+    ]
+  },
+  "criteria": {
+    "has_balls": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bouncy_ball"
+            ]
+          }
+        ]
+      }
+    },
+    "has_melon_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glass"
+            ]
+          }
+        ]
+      }
+    },
+    "has_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_block"
+            ]
+          }
+        ]
+      }
+    },
+    "has_pumpkin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:carved_pumpkin"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:compact_ball_golem"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_balls",
+      "has_glass",
+      "has_iron",
+      "has_pumpkin",
+      "has_the_recipe"
+    ]
+  ]
+}

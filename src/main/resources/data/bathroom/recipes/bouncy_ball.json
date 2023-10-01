@@ -1,17 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "P": {
-      "item": "minecraft:dried_kelp"
-    },
-    "S": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "minecraft:dried_kelp"
     }
-  },
-  "pattern": [
-    " S ",
-    "SPS",
-    " S "
   ],
   "result": {
     "count": 1,
