@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "bathroom",
-  "version": "${version}",
+  "version": "6.0.0",
   "name": "Bathroom Mod",
   "description": "Decorative blocks and miscellaneous features",
-  "authors": [ "Kjolt947" ],
+  "authors": ["Kjolt947"],
   "contact": {
     "homepage": "https://legacy.curseforge.com/minecraft/mc-mods/bathroom-blocks",
     "sources": "https://github.com/Kjolt947/Bathroom-Blocks"

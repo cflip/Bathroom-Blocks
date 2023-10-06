@@ -18,7 +18,7 @@
         ]
       }
     },
-    "has_melon_slice": {
+    "has_glass": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
