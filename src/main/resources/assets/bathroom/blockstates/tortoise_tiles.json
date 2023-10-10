@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "bathroom:block/tortoise_tiles"
+      }
+    ]
+  }
+}
