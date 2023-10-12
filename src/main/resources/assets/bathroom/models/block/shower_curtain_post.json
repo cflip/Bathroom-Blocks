@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "bathroom:block/shower_curtain_top",
+    "pane": "bathroom:block/shower_curtain"
+  }
+}
