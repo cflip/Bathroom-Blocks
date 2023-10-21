@@ -24,6 +24,7 @@ public class BathroomBlocks {
 	public static final Block FRUITY_TILES = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.2F, 6.0F).sounds(BlockSoundGroup.METAL));
 	public static final Block BERRY_TILES = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.2F, 6.0F).sounds(BlockSoundGroup.METAL));
 	public static final Block MELON_TILES = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.2F, 6.0F).sounds(BlockSoundGroup.METAL));
+	public static final Block PUMPKIN_TILES = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.2F, 6.0F).sounds(BlockSoundGroup.METAL));
 	public static final Block SOUR_TILES = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(1.2F, 6.0F).sounds(BlockSoundGroup.METAL));
 	public static final Block TURTLE_TILES = new Block(FabricBlockSettings.create().slipperiness(0.7f).requiresTool().strength(4F, 10.0F).sounds(BlockSoundGroup.STONE));
 	public static final Block TORTOISE_TILES = new Block(FabricBlockSettings.create().requiresTool().strength(4F, 10.0F).sounds(BlockSoundGroup.STONE));
@@ -47,6 +48,7 @@ public class BathroomBlocks {
 		registerBlockWithItem("fruity_tiles", FRUITY_TILES);
 		registerBlockWithItem("berry_tiles", BERRY_TILES);
 		registerBlockWithItem("melon_tiles", MELON_TILES);
+		registerBlockWithItem("pumpkin_tiles", PUMPKIN_TILES);
 		registerBlockWithItem("sour_tiles", SOUR_TILES);
 		registerBlockWithItem("turtle_tiles", TURTLE_TILES);
 		registerBlockWithItem("tortoise_tiles", TORTOISE_TILES);

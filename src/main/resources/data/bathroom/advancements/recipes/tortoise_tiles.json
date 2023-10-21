@@ -2,29 +2,29 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bathroom:raw_bathroom"
+      "bathroom:tortoise_tiles"
     ]
   },
   "criteria": {
-    "has_clay_ball": {
+    "has_turtle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:clay_ball"
+              "bathroom:raw_bathroom"
             ]
           }
         ]
       }
     },
-    "has_diorite": {
+    "has_dirt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diorite"
+              "minecraft:apple"
             ]
           }
         ]
@@ -33,14 +33,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bathroom:raw_bathroom"
+        "recipe": "bathroom:tortoise_tiles"
       }
     }
   },
   "requirements": [
     [
-      "has_diorite",
-      "has_clay_ball",
+      "has_turtle",
+      "has_dirt",
       "has_the_recipe"
     ]
   ]

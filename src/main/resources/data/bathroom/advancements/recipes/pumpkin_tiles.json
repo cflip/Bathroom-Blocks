@@ -2,29 +2,29 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bathroom:raw_bathroom"
+      "bathroom:pumpkin_tiles"
     ]
   },
   "criteria": {
-    "has_clay_ball": {
+    "has_bath": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:clay_ball"
+              "bathroom:raw_bathroom"
             ]
           }
         ]
       }
     },
-    "has_diorite": {
+    "has_pumpkin": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diorite"
+              "minecraft:pumpkin"
             ]
           }
         ]
@@ -33,14 +33,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bathroom:raw_bathroom"
+        "recipe": "bathroom:pumpkin_tiles"
       }
     }
   },
   "requirements": [
     [
-      "has_diorite",
-      "has_clay_ball",
+      "has_bath",
+      "has_pumpkin",
       "has_the_recipe"
     ]
   ]

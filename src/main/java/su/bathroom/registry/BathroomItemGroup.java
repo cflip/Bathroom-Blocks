@@ -22,9 +22,11 @@ public class BathroomItemGroup {
 				entries.add(BathroomBlocks.FRUITY_TILES);
 				entries.add(BathroomBlocks.BERRY_TILES);
 				entries.add(BathroomBlocks.MELON_TILES);
+				entries.add(BathroomBlocks.PUMPKIN_TILES);
 				entries.add(BathroomBlocks.SOUR_TILES);
 				entries.add(BathroomBlocks.TURTLE_TILES);
 				entries.add(BathroomBlocks.TORTOISE_TILES);
+				entries.add(BathroomBlocks.SHOWER_CURTAIN);
 				entries.add(BathroomBlocks.MIXED_BRICKS);
 				entries.add(BathroomBlocks.MIXED_BRICKS_SLAB);
 				entries.add(BathroomBlocks.INSULATION);

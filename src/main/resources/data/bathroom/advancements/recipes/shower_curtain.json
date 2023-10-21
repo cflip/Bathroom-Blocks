@@ -2,29 +2,29 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bathroom:raw_bathroom"
+      "bathroom:shower_curtain"
     ]
   },
   "criteria": {
-    "has_clay_ball": {
+    "has_cod": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:clay_ball"
+              "minecraft:cod"
             ]
           }
         ]
       }
     },
-    "has_diorite": {
+    "has_wools": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diorite"
+              "minecraft:white_wool"
             ]
           }
         ]
@@ -33,14 +33,14 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bathroom:raw_bathroom"
+        "recipe": "bathroom:shower_curtain"
       }
     }
   },
   "requirements": [
     [
-      "has_diorite",
-      "has_clay_ball",
+      "has_cod",
+      "has_wools",
       "has_the_recipe"
     ]
   ]

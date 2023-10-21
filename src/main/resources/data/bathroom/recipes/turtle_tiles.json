@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bathroom:raw_bathroom"
+    },
+    {
+      "item": "minecraft:scute"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "bathroom:turtle_tiles"
+  }
+}
