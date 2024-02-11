@@ -1,0 +1,35 @@
+{
+  "parent": "bathroom:root",
+  "display": {
+    "icon": {
+      "item": "bathroom:ricky_noodles"
+    },
+    "title": {
+      "translate": "advancements.bathroom.ricky.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.ricky.description"
+    },
+    "frame": "challenge",
+    "hidden": false
+  },
+  "criteria": {
+    "craft_ricky": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:ricky_noodles"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_ricky"
+    ]
+  ]
+}

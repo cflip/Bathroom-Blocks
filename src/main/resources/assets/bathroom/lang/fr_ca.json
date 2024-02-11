@@ -24,6 +24,9 @@
 
   "item.bathroom.bathroom_critter": "Bestiole de bain",
   "item.bathroom.splendor_critter": "Bestiole de splendeur",
+  "item.bathroom.gaming": "Jeux",
+  "item.bathroom.scran": "Restes",
+  "item.bathroom.ricky_noodles": "Nouilles Ricky",
   "item.bathroom.yoper": "Yopeur",
   "item.bathroom.gummies": "Gummies",
   "item.bathroom.worms_in_dirt": "Vers dans la saleté",
@@ -32,6 +35,7 @@
   "item.bathroom.pig_creeper_spawn_egg": "Oeuf spawneur de Creeper Cochon",
   "item.bathroom.ball_golem_spawn_egg": "Oeuf spawneur de Golem de balle",
   "item.bathroom.bouncy_ball": "Balle rebondissante",
+  "item.bathroom.basketball": "Basket-ball",
   "item.bathroom.fertilizer_bag": "Sac d'engrais",
   "item.bathroom.compact_ball_golem": "Golem de balle compacte",
 
@@ -68,6 +72,8 @@
   "advancements.bathroom.gummy.description": "Craftez des gummies",
   "advancements.bathroom.worm.title": "Rampant avec la saleté",
   "advancements.bathroom.worm.description": "Craftez vers dans la saleté",
+  "advancements.bathroom.ricky.title": "Recette de famille",
+  "advancements.bathroom.ricky.description": "Craftez Nouilles Ricky",
   "advancements.bathroom.critter.title": "Latrinalia divine",
   "advancements.bathroom.critter.description": "Donnez forme à une bestiole de splendeur",
   "advancements.bathroom.splendor.title": "L'esprit de Melondeau",

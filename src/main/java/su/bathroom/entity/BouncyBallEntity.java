@@ -38,8 +38,8 @@ public class BouncyBallEntity extends ThrownItemEntity {
         this.dropItem = dropItem;
     }
 
-    public BouncyBallEntity(World world, double x, double y, double z, boolean dropItem) {
-        super(BathroomMod.BOUNCY_BALL_ENTITY, x, y, z, world);
+    public BouncyBallEntity(EntityType<? extends BouncyBallEntity> entityType, World world, double x, double y, double z, boolean dropItem) {
+        super(entityType, x, y, z, world);
         this.dropItem = dropItem;
     }
 
