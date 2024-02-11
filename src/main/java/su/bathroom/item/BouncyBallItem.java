@@ -8,6 +8,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import su.bathroom.BathroomMod;
 import su.bathroom.entity.BouncyBallEntity;
 
 public class BouncyBallItem extends Item {
@@ -21,9 +22,9 @@ public class BouncyBallItem extends Item {
 
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5f, 0.5f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!world.isClient()) {
-            BouncyBallEntity bouncyBall = new BouncyBallEntity(world, user, true);
+            BouncyBallEntity bouncyBall = getThrownItem(world, user);
             bouncyBall.setItem(itemStack);
-            bouncyBall.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 1.5f, 1.0f);
+            bouncyBall.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, getThrowSpeed(), 1.0f);
             world.spawnEntity(bouncyBall);
         }
 
@@ -32,5 +33,13 @@ public class BouncyBallItem extends Item {
         }
 
         return TypedActionResult.success(itemStack, world.isClient());
+    }
+
+    protected float getThrowSpeed() {
+        return 1.5f;
+    }
+
+    protected BouncyBallEntity getThrownItem(World world, PlayerEntity user) {
+        return new BouncyBallEntity(BathroomMod.BOUNCY_BALL_ENTITY, world, user, true);
     }
 }

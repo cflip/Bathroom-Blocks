@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import su.bathroom.BathroomMod;
 import su.bathroom.entity.BasketballEntity;
 import su.bathroom.entity.BouncyBallEntity;
+import su.bathroom.item.BasketballItem;
 import su.bathroom.item.BouncyBallItem;
 import su.bathroom.item.FertilizerBagItem;
 import su.bathroom.item.MushspawnItem;
@@ -38,7 +39,7 @@ public class BathroomItems {
 	public static final Item PIG_CREEPER_SPAWN_EGG = new SpawnEggItem(BathroomMod.PIG_CREEPER_ENTITY, 0xFF9B86, 0x503D39, new Item.Settings());
 	public static final Item BALL_GOLEM_SPAWN_EGG = new SpawnEggItem(BathroomMod.BALL_GOLEM_ENTITY, 0xCD82D7, 0x894F91, new Item.Settings());
 	public static final Item BOUNCY_BALL = new BouncyBallItem(new Item.Settings());
-	public static final Item BASKETBALL = new BouncyBallItem(new Item.Settings());
+	public static final Item BASKETBALL = new BasketballItem(new Item.Settings());
 	public static final Item FERTILIZER_BAG = new FertilizerBagItem(new Item.Settings().maxCount(1).maxDamage(16));
 	public static final Item COMPACT_BALL_GOLEM = new CompactBallGolemItem(new Item.Settings());
 
@@ -70,7 +71,7 @@ public class BathroomItems {
 		DispenserBlock.registerBehavior(BASKETBALL, new ProjectileDispenserBehavior() {
 			@Override
 			protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
-				return Util.make(new BasketballEntity(world, position.getX(), position.getY(), position.getZ(), true), BasketballEntity -> BasketballEntity.setItem(stack));
+				return Util.make(new BasketballEntity(world, position.getX(), position.getY(), position.getZ(), true), basketballEntity -> basketballEntity.setItem(stack));
 			}
 		});
 	}

@@ -9,16 +9,19 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.BiomeKeys;
 import su.bathroom.advancement.criterion.BouncyBallFireCriterion;
 import su.bathroom.entity.BallGolemEntity;
-import su.bathroom.entity.BouncyBallEntity;
 import su.bathroom.entity.BasketballEntity;
+import su.bathroom.entity.BouncyBallEntity;
 import su.bathroom.entity.MushletEntity;
 import su.bathroom.entity.PigCreeperEntity;
 import su.bathroom.registry.BathroomBlocks;
@@ -30,8 +33,10 @@ public class BathroomMod implements ModInitializer {
 	public static final FoodComponent SCRAN_FOOD = new FoodComponent.Builder().hunger(5).saturationModifier(0.5f).build();
 	public static final FoodComponent GUMMIES_FOOD = new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build();
 	public static final FoodComponent WORMS_IN_DIRT_FOOD = new FoodComponent.Builder().hunger(7).saturationModifier(0.4f).build();
-	public static final FoodComponent RICKY_NOODLES_FOOD = new FoodComponent.Builder().hunger(9).saturationModifier(0.6f).build();
+	public static final FoodComponent RICKY_NOODLES_FOOD = new FoodComponent.Builder().hunger(9).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600), 100.0f).build();
 
+	public static final Identifier BOUNCE_SOUND_IDENTIFIER = new Identifier("bathroom", "basketball_bounce");
+	public static SoundEvent BASKETBALL_BOUNCE_SOUND = SoundEvent.of(BOUNCE_SOUND_IDENTIFIER);
 
 	public static EntityType<MushletEntity> MUSHLET_ENTITY;
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
@@ -73,6 +78,8 @@ public class BathroomMod implements ModInitializer {
 		BOUNCY_BALL_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "bouncy_ball"), FabricEntityTypeBuilder.create(SpawnGroup.MISC, (EntityType.EntityFactory<BouncyBallEntity>) BouncyBallEntity::new).dimensions(new EntityDimensions(0.25f, 0.25f, true)).trackedUpdateRate(16).build());
 		BASKETBALL_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "basketball"), FabricEntityTypeBuilder.create(SpawnGroup.MISC, (EntityType.EntityFactory<BasketballEntity>) BasketballEntity::new).dimensions(new EntityDimensions(0.25f, 0.25f, true)).trackedUpdateRate(16).build());
 		BALL_GOLEM_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "ball_golem"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BallGolemEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
+
+		BASKETBALL_BOUNCE_SOUND = Registry.register(Registries.SOUND_EVENT, BOUNCE_SOUND_IDENTIFIER, BASKETBALL_BOUNCE_SOUND);
 
 		BOUNCY_BALL_FIRE_CRITERION = Criteria.register(new BouncyBallFireCriterion());
 

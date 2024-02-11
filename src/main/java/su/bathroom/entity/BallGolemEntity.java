@@ -15,6 +15,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import su.bathroom.BathroomMod;
 
 public class BallGolemEntity extends GolemEntity implements RangedAttackMob {
     public BallGolemEntity(EntityType<? extends GolemEntity> entityType, World world) {
@@ -31,7 +32,7 @@ public class BallGolemEntity extends GolemEntity implements RangedAttackMob {
     }
 
     public void attack(LivingEntity target, float pullProgress) {
-        BouncyBallEntity bouncyBall = new BouncyBallEntity(this.getWorld(), this, false);
+        BouncyBallEntity bouncyBall = new BouncyBallEntity(BathroomMod.BOUNCY_BALL_ENTITY, this.getWorld(), this, false);
         double d = target.getEyeY() - 1.1;
         double e = target.getX() - this.getX();
         double f = d - bouncyBall.getY();

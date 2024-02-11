@@ -5,11 +5,13 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
@@ -33,8 +35,8 @@ public class BouncyBallEntity extends ThrownItemEntity {
         super(entityType, world);
     }
 
-    public BouncyBallEntity(World world, LivingEntity owner, boolean dropItem) {
-        super(BathroomMod.BOUNCY_BALL_ENTITY, owner, world);
+    public BouncyBallEntity(EntityType<? extends BouncyBallEntity> entityType, World world, LivingEntity owner, boolean dropItem) {
+        super(entityType, owner, world);
         this.dropItem = dropItem;
     }
 
@@ -52,24 +54,28 @@ public class BouncyBallEntity extends ThrownItemEntity {
 
         if (getVelocity().length() < DEATH_VELOCITY && !world.isClient()) {
             if (dropItem) {
-                ItemEntity itemEntity = new ItemEntity(world, getX(), getY(), getZ(), getDefaultItem().getDefaultStack());
+                ItemStack stack = getDefaultItem().getDefaultStack();
+                ItemEntity itemEntity = new ItemEntity(world, getX(), getY(), getZ(), stack);
                 world.spawnEntity(itemEntity);
             }
             world.sendEntityStatus(this, (byte)3);
             discard();
         }
 
-        particleVelocity = particleVelocity.normalize().multiply(-0.25f);
-        for (int i = 0; i < 8; i++) {
-            float angle = this.random.nextFloat() * 2 * MathHelper.PI;
-            float spread = 0.25f;
-            float spreadX = MathHelper.sin(angle) * spread;
-            float spreadZ = MathHelper.cos(angle) * spread;
-            world.addParticle(PARTICLE_EFFECT, getX() + spreadX, getY(), getZ() + spreadZ, particleVelocity.x, particleVelocity.y, particleVelocity.z);
+        ParticleEffect particleEffect = getParticleEffect();
+        if (particleEffect != null) {
+            particleVelocity = particleVelocity.normalize().multiply(-0.25f);
+            for (int i = 0; i < 8; i++) {
+                float angle = this.random.nextFloat() * 2 * MathHelper.PI;
+                float spread = 0.25f;
+                float spreadX = MathHelper.sin(angle) * spread;
+                float spreadZ = MathHelper.cos(angle) * spread;
+                world.addParticle(particleEffect, getX() + spreadX, getY(), getZ() + spreadZ, particleVelocity.x, particleVelocity.y, particleVelocity.z);
+            }
         }
 
         float soundVolume = (float) Math.log(Math.abs(getVelocity().length()) + 1);
-        world.playSound(null, getX(), getY(), getZ(), SoundEvents.ENTITY_SLIME_JUMP_SMALL, SoundCategory.NEUTRAL, soundVolume, 1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        world.playSound(null, getX(), getY(), getZ(), getSound(), SoundCategory.NEUTRAL, soundVolume, 1.0f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
     }
 
     @Override
@@ -104,5 +110,13 @@ public class BouncyBallEntity extends ThrownItemEntity {
     @Override
     protected Item getDefaultItem() {
         return BathroomItems.BOUNCY_BALL;
+    }
+
+    protected ParticleEffect getParticleEffect() {
+        return PARTICLE_EFFECT;
+    }
+
+    protected SoundEvent getSound() {
+        return SoundEvents.ENTITY_SLIME_JUMP_SMALL;
     }
 }
