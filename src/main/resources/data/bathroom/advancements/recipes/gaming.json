@@ -2,41 +2,41 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bathroom:scran"
+      "bathroom:gaming"
     ]
   },
   "criteria": {
-    "has_carrot": {
+    "has_repeater": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:carrot"
+              "minecraft:repeater"
             ]
           }
         ]
       }
     },
-    "has_egg": {
+    "has_copper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:egg"
+              "minecraft:copper_ingot"
             ]
           }
         ]
       }
     },
-    "has_chicken": {
+    "has_button": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cooked_chicken"
+              "minecraft:stone_button"
             ]
           }
         ]
@@ -45,15 +45,15 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bathroom:scran"
+        "recipe": "bathroom:gaming"
       }
     }
   },
   "requirements": [
     [
-      "has_carrot",
-      "has_chicken",
-      "has_egg",
+      "has_button",
+      "has_copper",
+      "has_repeater",
       "has_the_recipe"
     ]
   ]
