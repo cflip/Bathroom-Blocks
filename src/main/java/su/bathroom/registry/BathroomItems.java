@@ -26,8 +26,8 @@ import su.bathroom.item.CompactBallGolemItem;
 public class BathroomItems {
 	public static final Item BATHROOM_CRITTER = new Item(new Item.Settings());
 	public static final Item SPLENDOR_CRITTER = new Item(new Item.Settings());
+	public static final Item GREASE_CRITTER = new Item(new Item.Settings());
 	public static final Item GAMING = new Item(new Item.Settings());
-
 	public static final Item YOPER = new Item(new Item.Settings());
 	public static final Item SCRAN = new Item(new FabricItemSettings().food(BathroomMod.SCRAN_FOOD));
 	public static final Item GUMMIES = new Item(new FabricItemSettings().food(BathroomMod.GUMMIES_FOOD));
@@ -46,6 +46,7 @@ public class BathroomItems {
 	public static void registerItems() {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bathroom_critter"), BATHROOM_CRITTER);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "splendor_critter"), SPLENDOR_CRITTER);
+		Registry.register(Registries.ITEM, new Identifier("bathroom", "grease_critter"), GREASE_CRITTER);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "gaming"), GAMING);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "yoper"), YOPER);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "scran"), SCRAN);

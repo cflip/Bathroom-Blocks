@@ -45,6 +45,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.WORMS_IN_DIRT);
 				entries.add(BathroomItems.BATHROOM_CRITTER);
 				entries.add(BathroomItems.SPLENDOR_CRITTER);
+				entries.add(BathroomItems.GREASE_CRITTER);
 				entries.add(BathroomItems.MUSHSPAWN);
 				entries.add(BathroomItems.COMPACT_BALL_GOLEM);
 				entries.add(BathroomItems.MUSHLET_SPAWN_EGG);
