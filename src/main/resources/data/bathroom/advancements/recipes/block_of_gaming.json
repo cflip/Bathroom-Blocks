@@ -2,41 +2,32 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bathroom:bouncy_ball"
+      "bathroom:block_of_gaming"
     ]
   },
   "criteria": {
-    "has_dried_kelp": {
+    "has_gaming": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:dried_kelp"
+              "bathroom:gaming"
             ]
           }
-        ]
-      }
-    },
-    "has_slime": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          "minecraft:slime_ball"
         ]
       }
     },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bathroom:bouncy_ball"
+        "recipe": "bathroom:block_of_gaming"
       }
     }
   },
   "requirements": [
     [
-      "has_dried_kelp",
-      "has_slime",
+      "has_gaming",
       "has_the_recipe"
     ]
   ]

@@ -27,6 +27,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomBlocks.TURTLE_TILES);
 				entries.add(BathroomBlocks.TORTOISE_TILES);
 				entries.add(BathroomBlocks.SHOWER_CURTAIN);
+				entries.add(BathroomBlocks.BLOCK_OF_GAMING);
 				entries.add(BathroomBlocks.MIXED_BRICKS);
 				entries.add(BathroomBlocks.MIXED_BRICKS_SLAB);
 				entries.add(BathroomBlocks.INSULATION);

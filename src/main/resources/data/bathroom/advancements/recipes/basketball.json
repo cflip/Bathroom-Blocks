@@ -6,37 +6,37 @@
     ]
   },
   "criteria": {
-    "has_dried_kelp": {
+    "has_leather": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:dried_kelp"
+              "minecraft:leather"
             ]
           }
         ]
       }
     },
-    "has_slime": {
+    "has_ball": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          "minecraft:slime_ball"
+            "minecraft:bouncy_ball"
         ]
       }
     },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bathroom:bouncy_ball"
+        "recipe": "bathroom:basketball"
       }
     }
   },
   "requirements": [
     [
-      "has_dried_kelp",
-      "has_slime",
+      "has_ball",
+      "has_leather",
       "has_the_recipe"
     ]
   ]
