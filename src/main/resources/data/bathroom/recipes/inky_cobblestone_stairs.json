@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "bathroom:inky_cobblestone"
+    }
+  },
+  "pattern": [
+    "  C",
+    " CC",
+    "CCC"
+  ],
+  "result": {
+    "count": 4,
+    "item": "bathroom:inky_cobblestone_stairs"
+  }
+}

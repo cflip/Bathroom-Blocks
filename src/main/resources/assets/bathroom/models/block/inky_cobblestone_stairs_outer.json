@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "bathroom:block/inky_cobblestone",
+    "side": "bathroom:block/inky_cobblestone",
+    "top": "bathroom:block/inky_cobblestone"
+  }
+}

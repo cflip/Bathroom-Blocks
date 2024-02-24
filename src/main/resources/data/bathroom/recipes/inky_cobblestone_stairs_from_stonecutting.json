@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "bathroom:inky_cobblestone"
+  },
+  "result": "bathroom:inky_cobblestone_stairs"
+}

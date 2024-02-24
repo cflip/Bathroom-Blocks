@@ -2,10 +2,7 @@ package su.bathroom.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.PaneBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -31,9 +28,11 @@ public class BathroomBlocks {
 	public static final Block SHOWER_CURTAIN = new PaneBlock(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL));
 	public static final Block BLOCK_OF_GAMING = new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK));
 	public static final Block MIXED_BRICKS = new Block(FabricBlockSettings.copyOf(Blocks.BRICKS).requiresTool().strength(2F, 6.0F));
-	public static final SlabBlock MIXED_BRICKS_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.BRICKS).requiresTool().strength(2F, 6.0F));
+	public static final SlabBlock MIXED_BRICKS_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.BRICK_SLAB).requiresTool().strength(2F, 6.0F));
+	public static final StairsBlock MIXED_BRICK_STAIRS = new StairsBlock(MIXED_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(MIXED_BRICKS));
 	public static final Block INKY_COBBLESTONE = new Block(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(2F, 6.0F));
-	public static final SlabBlock INKY_COBBLESTONE_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(2F, 6.0F));
+	public static final SlabBlock INKY_COBBLESTONE_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE_SLAB).requiresTool().strength(2F, 6.0F));
+	public static final StairsBlock INKY_COBBLESTONE_STAIRS = new StairsBlock(INKY_COBBLESTONE.getDefaultState(), AbstractBlock.Settings.copy(INKY_COBBLESTONE));
 	public static final Block INKY_MOSS_STONE = new Block(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(2F, 6.0F));
 	public static final Block YOPORE = new Block(FabricBlockSettings.copyOf(Blocks.STONE).requiresTool().strength(3F, 3.0F));
 	public static final Block INSULATION = new Block(FabricBlockSettings.create().sounds(BlockSoundGroup.WOOL).strength(1.2F, 3.0F));
@@ -57,8 +56,10 @@ public class BathroomBlocks {
 		registerBlockWithItem("block_of_gaming", BLOCK_OF_GAMING);
 		registerBlockWithItem("mixed_bricks", MIXED_BRICKS);
 		registerBlockWithItem("mixed_bricks_slab", MIXED_BRICKS_SLAB);
+		registerBlockWithItem("mixed_brick_stairs", MIXED_BRICK_STAIRS);
 		registerBlockWithItem("inky_cobblestone", INKY_COBBLESTONE);
 		registerBlockWithItem("inky_cobblestone_slab", INKY_COBBLESTONE_SLAB);
+		registerBlockWithItem("inky_cobblestone_stairs", INKY_COBBLESTONE_STAIRS);
 		registerBlockWithItem("inky_moss_stone", INKY_MOSS_STONE);
 		registerBlockWithItem("yopore", YOPORE);
 		registerBlockWithItem("insulation", INSULATION);
