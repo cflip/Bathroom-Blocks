@@ -4,13 +4,13 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.StewItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.Position;
 import net.minecraft.world.World;
@@ -43,6 +43,10 @@ public class BathroomItems {
 	public static final Item FERTILIZER_BAG = new FertilizerBagItem(new Item.Settings().maxCount(1).maxDamage(16));
 	public static final Item COMPACT_BALL_GOLEM = new CompactBallGolemItem(new Item.Settings());
 
+	public static final Identifier YOPERSONG_IDENTIFIER = new Identifier("bathroom", "records.yopersong");
+	public static SoundEvent YOPERSONG = SoundEvent.of(YOPERSONG_IDENTIFIER);
+	public static final Item MUSIC_DISC_YOPERSONG = new MusicDiscItem(3,YOPERSONG, (new Item.Settings()).maxCount(1).rarity(Rarity.RARE), 116);
+
 	public static void registerItems() {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bathroom_critter"), BATHROOM_CRITTER);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "splendor_critter"), SPLENDOR_CRITTER);
@@ -62,6 +66,9 @@ public class BathroomItems {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "basketball"), BASKETBALL);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "fertilizer_bag"), FERTILIZER_BAG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "compact_ball_golem"), COMPACT_BALL_GOLEM);
+
+		YOPERSONG = Registry.register(Registries.SOUND_EVENT, YOPERSONG_IDENTIFIER, YOPERSONG);
+		Registry.register(Registries.ITEM, new Identifier("bathroom","music_disc_yopersong"),MUSIC_DISC_YOPERSONG);
 
 		DispenserBlock.registerBehavior(BOUNCY_BALL, new ProjectileDispenserBehavior() {
 			@Override
