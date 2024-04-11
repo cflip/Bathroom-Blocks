@@ -4,5 +4,11 @@
     "sounds": [
       "bathroom:basketball_bounce"
     ]
+  },
+  "yopersong": {
+    "subtitle": "subtitles.bathroom.yopersong",
+    "sounds": [
+      "bathroom:records/yopersong"
+    ]
   }
 }

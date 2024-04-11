@@ -43,7 +43,7 @@ public class BathroomItems {
 	public static final Item FERTILIZER_BAG = new FertilizerBagItem(new Item.Settings().maxCount(1).maxDamage(16));
 	public static final Item COMPACT_BALL_GOLEM = new CompactBallGolemItem(new Item.Settings());
 
-	public static final Identifier YOPERSONG_IDENTIFIER = new Identifier("bathroom", "records.yopersong");
+	public static final Identifier YOPERSONG_IDENTIFIER = new Identifier("bathroom", "yopersong");
 	public static SoundEvent YOPERSONG = SoundEvent.of(YOPERSONG_IDENTIFIER);
 	public static final Item MUSIC_DISC_YOPERSONG = new MusicDiscItem(3,YOPERSONG, (new Item.Settings()).maxCount(1).rarity(Rarity.RARE), 116);
 
