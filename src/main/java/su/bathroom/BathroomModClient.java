@@ -13,10 +13,12 @@ import su.bathroom.entity.*;
 @Environment(EnvType.CLIENT)
 public class BathroomModClient implements ClientModInitializer {
 	public static final EntityModelLayer MUSHLET_MODEL_LAYER = new EntityModelLayer(new Identifier("bathroom", "mushlet"), "main");
+	public static final EntityModelLayer CLANGOR_MODEL_LAYER = new EntityModelLayer(new Identifier("bathroom", "clangor"), "main");
 	@Override
 	public void onInitializeClient() {
 		EntityRendererRegistry.register(BathroomMod.MUSHLET_ENTITY, MushletRenderer::new);
 		EntityRendererRegistry.register(BathroomMod.PIG_CREEPER_ENTITY, PigCreeperEntityRenderer::new);
+		EntityRendererRegistry.register(BathroomMod.CLANGOR_ENTITY, ClangorEntityRenderer::new);
 		EntityRendererRegistry.register(BathroomMod.BOUNCY_BALL_ENTITY, FlyingItemEntityRenderer::new);
 		EntityRendererRegistry.register(BathroomMod.BASKETBALL_ENTITY, FlyingItemEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(MUSHLET_MODEL_LAYER, MushletModel::getTexturedModelData);

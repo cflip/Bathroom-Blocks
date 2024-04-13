@@ -40,6 +40,7 @@ public class BathroomMod implements ModInitializer {
 
 	public static EntityType<MushletEntity> MUSHLET_ENTITY;
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
+	public static EntityType<ClangorEntity> CLANGOR_ENTITY;
 	public static EntityType<BouncyBallEntity> BOUNCY_BALL_ENTITY;
 	public static EntityType<BasketballEntity> BASKETBALL_ENTITY;
 	public static EntityType<BallGolemEntity> BALL_GOLEM_ENTITY;
@@ -76,6 +77,7 @@ public class BathroomMod implements ModInitializer {
 	public void onInitialize() {
 		MUSHLET_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "mushlet"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushletEntity::new).dimensions(new EntityDimensions(0.6F, 0.8F, true)).build());
 		PIG_CREEPER_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "pig_creeper"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, PigCreeperEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
+		CLANGOR_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "clangor"), FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, ClangorEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
 		BOUNCY_BALL_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "bouncy_ball"), FabricEntityTypeBuilder.create(SpawnGroup.MISC, (EntityType.EntityFactory<BouncyBallEntity>) BouncyBallEntity::new).dimensions(new EntityDimensions(0.25f, 0.25f, true)).trackedUpdateRate(16).build());
 		BASKETBALL_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "basketball"), FabricEntityTypeBuilder.create(SpawnGroup.MISC, (EntityType.EntityFactory<BasketballEntity>) BasketballEntity::new).dimensions(new EntityDimensions(0.25f, 0.25f, true)).trackedUpdateRate(16).build());
 		BALL_GOLEM_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "ball_golem"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BallGolemEntity::new).dimensions(new EntityDimensions(0.6F, 1.7F, true)).build());
@@ -87,6 +89,7 @@ public class BathroomMod implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(MUSHLET_ENTITY, MushletEntity.createMushletAttributes());
 		FabricDefaultAttributeRegistry.register(PIG_CREEPER_ENTITY, PigCreeperEntity.createCreeperAttributes());
+		FabricDefaultAttributeRegistry.register(CLANGOR_ENTITY, ClangorEntity.createCreeperAttributes());
 		FabricDefaultAttributeRegistry.register(BALL_GOLEM_ENTITY, SnowGolemEntity.createSnowGolemAttributes());
 		FabricDefaultAttributeRegistry.register(VIDEO_GAMER_ENTITY, VideoGamerEntity.createVideoGamerAttributes());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);
