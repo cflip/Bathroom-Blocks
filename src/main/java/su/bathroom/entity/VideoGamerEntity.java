@@ -1,5 +1,6 @@
 package su.bathroom.entity;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -8,6 +9,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.ChickenEntity;
+import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -17,10 +19,13 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.TimeHelper;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
+import su.bathroom.registry.BathroomBlocks;
 import su.bathroom.registry.BathroomItems;
 
 import java.util.UUID;
@@ -59,10 +64,14 @@ public class VideoGamerEntity extends PassiveEntity {
         this.goalSelector.add(2, new AvoidSunlightGoal(this));
         this.goalSelector.add(3, new EscapeSunlightGoal(this, 1.0));
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0, false));
+        this.goalSelector.add(3, new PounceAtTargetGoal(this, 0.5F));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
-        this.targetSelector.add(1, new ActiveTargetGoal(this, ChickenEntity.class, false));
+        this.targetSelector.add(1, new ActiveTargetGoal(this, CowEntity.class, false));
+    }
+    public float getPathfindingFavor(BlockPos pos, WorldView world) {
+        return world.getBlockState(pos.down()).isOf(BathroomBlocks.LAN_PARTY) ? 10.0F : world.getPhototaxisFavor(pos);
     }
     public void tickMovement() {
         boolean bl = this.isAffectedByDaylight();

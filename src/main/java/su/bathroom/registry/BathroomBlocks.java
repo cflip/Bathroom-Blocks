@@ -27,6 +27,7 @@ public class BathroomBlocks {
 	public static final Block TORTOISE_TILES = new Block(FabricBlockSettings.create().requiresTool().strength(4F, 10.0F).sounds(BlockSoundGroup.STONE));
 	public static final Block SHOWER_CURTAIN = new PaneBlock(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL));
 	public static final Block BLOCK_OF_GAMING = new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK));
+	public static final Block LAN_PARTY = new Block(FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK));
 	public static final Block MIXED_BRICKS = new Block(FabricBlockSettings.copyOf(Blocks.BRICKS).requiresTool().strength(2F, 6.0F));
 	public static final SlabBlock MIXED_BRICKS_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.BRICK_SLAB).requiresTool().strength(2F, 6.0F));
 	public static final StairsBlock MIXED_BRICK_STAIRS = new StairsBlock(MIXED_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(MIXED_BRICKS));
@@ -54,6 +55,7 @@ public class BathroomBlocks {
 		registerBlockWithItem("tortoise_tiles", TORTOISE_TILES);
 		registerBlockWithItem("shower_curtain", SHOWER_CURTAIN);
 		registerBlockWithItem("block_of_gaming", BLOCK_OF_GAMING);
+		registerBlockWithItem("lan_party", LAN_PARTY);
 		registerBlockWithItem("mixed_bricks", MIXED_BRICKS);
 		registerBlockWithItem("mixed_bricks_slab", MIXED_BRICKS_SLAB);
 		registerBlockWithItem("mixed_brick_stairs", MIXED_BRICK_STAIRS);

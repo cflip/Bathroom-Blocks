@@ -28,6 +28,7 @@ public class BathroomItems {
 	public static final Item SCRAN = new Item(new FabricItemSettings().food(BathroomMod.SCRAN_FOOD));
 	public static final Item GUMMIES = new Item(new FabricItemSettings().food(BathroomMod.GUMMIES_FOOD));
 	public static final Item GAMER_GOOP = new Item(new FabricItemSettings().food(BathroomMod.GAMER_GOOP_FOOD));
+	public static final Item GAMERS_DELIGHT = new Item(new FabricItemSettings().food(BathroomMod.GAMERS_DELIGHT_FOOD));
 	public static final Item WORMS_IN_DIRT = new StewItem(new FabricItemSettings().food(BathroomMod.WORMS_IN_DIRT_FOOD));
 	public static final Item RICKY_NOODLES = new StewItem(new FabricItemSettings().food(BathroomMod.RICKY_NOODLES_FOOD));
 	public static final Item MUSHSPAWN = new MushspawnItem(new Item.Settings());
@@ -55,6 +56,7 @@ public class BathroomItems {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "scran"), SCRAN);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "gummies"), GUMMIES);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "gamer_goop"), GAMER_GOOP);
+		Registry.register(Registries.ITEM, new Identifier("bathroom", "gamers_delight"), GAMERS_DELIGHT);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "worms_in_dirt"), WORMS_IN_DIRT);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "ricky_noodles"), RICKY_NOODLES);
 

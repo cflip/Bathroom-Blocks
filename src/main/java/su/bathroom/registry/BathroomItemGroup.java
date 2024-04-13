@@ -27,7 +27,6 @@ public class BathroomItemGroup {
 				entries.add(BathroomBlocks.TURTLE_TILES);
 				entries.add(BathroomBlocks.TORTOISE_TILES);
 				entries.add(BathroomBlocks.SHOWER_CURTAIN);
-				entries.add(BathroomBlocks.BLOCK_OF_GAMING);
 				entries.add(BathroomBlocks.MIXED_BRICKS);
 				entries.add(BathroomBlocks.MIXED_BRICKS_SLAB);
 				entries.add(BathroomBlocks.MIXED_BRICK_STAIRS);
@@ -36,6 +35,8 @@ public class BathroomItemGroup {
 				entries.add(BathroomBlocks.INKY_COBBLESTONE_SLAB);
 				entries.add(BathroomBlocks.INKY_COBBLESTONE_STAIRS);
 				entries.add(BathroomBlocks.INKY_MOSS_STONE);
+				entries.add(BathroomBlocks.BLOCK_OF_GAMING);
+				entries.add(BathroomBlocks.LAN_PARTY);
 				entries.add(BathroomBlocks.YOPORE);
 				entries.add(BathroomItems.YOPER);
 				entries.add(BathroomItems.BOUNCY_BALL);
@@ -43,6 +44,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.FERTILIZER_BAG);
 				entries.add(BathroomItems.GAMING);
 				entries.add(BathroomItems.GAMER_GOOP);
+				entries.add(BathroomItems.GAMERS_DELIGHT);
 				entries.add(BathroomItems.SCRAN);
 				entries.add(BathroomItems.RICKY_NOODLES);
 				entries.add(BathroomItems.GUMMIES);

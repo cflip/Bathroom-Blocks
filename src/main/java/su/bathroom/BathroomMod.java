@@ -31,8 +31,9 @@ public class BathroomMod implements ModInitializer {
 	public static final FoodComponent SCRAN_FOOD = new FoodComponent.Builder().hunger(5).saturationModifier(0.6f).build();
 	public static final FoodComponent GUMMIES_FOOD = new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build();
 	public static final FoodComponent GAMER_GOOP_FOOD = new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 320), 64.0f).build();
+	public static final FoodComponent GAMERS_DELIGHT_FOOD = new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 640), 64.0f).build();
 	public static final FoodComponent WORMS_IN_DIRT_FOOD = new FoodComponent.Builder().hunger(7).saturationModifier(0.4f).build();
-	public static final FoodComponent RICKY_NOODLES_FOOD = new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600), 100.0f).build();
+	public static final FoodComponent RICKY_NOODLES_FOOD = new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600), 100.0f).build();
 
 	public static final Identifier BOUNCE_SOUND_IDENTIFIER = new Identifier("bathroom", "basketball_bounce");
 	public static SoundEvent BASKETBALL_BOUNCE_SOUND = SoundEvent.of(BOUNCE_SOUND_IDENTIFIER);
