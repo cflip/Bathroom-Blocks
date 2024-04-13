@@ -7,23 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 4,
-          "name": "minecraft:slime_ball",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 2
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 4,
-          "name": "bathroom:gummies",
+          "name": "bathroom:compact_ball_golem",
           "functions": [
             {
               "function": "minecraft:set_count",

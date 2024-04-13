@@ -8,10 +8,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
-import su.bathroom.entity.BallGolemEntityRenderer;
-import su.bathroom.entity.MushletModel;
-import su.bathroom.entity.MushletRenderer;
-import su.bathroom.entity.PigCreeperEntityRenderer;
+import su.bathroom.entity.*;
 
 @Environment(EnvType.CLIENT)
 public class BathroomModClient implements ClientModInitializer {
@@ -24,5 +21,6 @@ public class BathroomModClient implements ClientModInitializer {
 		EntityRendererRegistry.register(BathroomMod.BASKETBALL_ENTITY, FlyingItemEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(MUSHLET_MODEL_LAYER, MushletModel::getTexturedModelData);
 		EntityRendererRegistry.register(BathroomMod.BALL_GOLEM_ENTITY, BallGolemEntityRenderer::new);
+		EntityRendererRegistry.register(BathroomMod.VIDEO_GAMER_ENTITY, VideoGamerEntityRenderer::new);
 	}
 }

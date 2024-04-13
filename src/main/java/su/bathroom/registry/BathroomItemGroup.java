@@ -40,8 +40,9 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.YOPER);
 				entries.add(BathroomItems.BOUNCY_BALL);
 				entries.add(BathroomItems.BASKETBALL);
-				entries.add(BathroomItems.GAMING);
 				entries.add(BathroomItems.FERTILIZER_BAG);
+				entries.add(BathroomItems.GAMING);
+				entries.add(BathroomItems.GAMER_GOOP);
 				entries.add(BathroomItems.SCRAN);
 				entries.add(BathroomItems.RICKY_NOODLES);
 				entries.add(BathroomItems.GUMMIES);
@@ -51,9 +52,11 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.GREASE_CRITTER);
 				entries.add(BathroomItems.MUSHSPAWN);
 				entries.add(BathroomItems.COMPACT_BALL_GOLEM);
+				entries.add(BathroomItems.GAMER_GRUB);
 				entries.add(BathroomItems.MUSHLET_SPAWN_EGG);
 				entries.add(BathroomItems.PIG_CREEPER_SPAWN_EGG);
 				entries.add(BathroomItems.BALL_GOLEM_SPAWN_EGG);
+				entries.add(BathroomItems.VIDEO_GAMER_SPAWN_EGG);
 				entries.add(BathroomItems.MUSIC_DISC_YOPERSONG);
 			})
 			.build();
