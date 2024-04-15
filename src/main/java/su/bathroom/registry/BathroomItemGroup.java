@@ -57,6 +57,7 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.GAMER_GRUB);
 				entries.add(BathroomItems.MUSHLET_SPAWN_EGG);
 				entries.add(BathroomItems.PIG_CREEPER_SPAWN_EGG);
+				entries.add(BathroomItems.CLANGOR_SPAWN_EGG);
 				entries.add(BathroomItems.BALL_GOLEM_SPAWN_EGG);
 				entries.add(BathroomItems.VIDEO_GAMER_SPAWN_EGG);
 				entries.add(BathroomItems.MUSIC_DISC_YOPERSONG);

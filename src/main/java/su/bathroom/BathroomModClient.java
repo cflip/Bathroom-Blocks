@@ -22,6 +22,7 @@ public class BathroomModClient implements ClientModInitializer {
 		EntityRendererRegistry.register(BathroomMod.BOUNCY_BALL_ENTITY, FlyingItemEntityRenderer::new);
 		EntityRendererRegistry.register(BathroomMod.BASKETBALL_ENTITY, FlyingItemEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(MUSHLET_MODEL_LAYER, MushletModel::getTexturedModelData);
+		EntityModelLayerRegistry.registerModelLayer(CLANGOR_MODEL_LAYER, ClangorEntityModel::getTexturedModelData);
 		EntityRendererRegistry.register(BathroomMod.BALL_GOLEM_ENTITY, BallGolemEntityRenderer::new);
 		EntityRendererRegistry.register(BathroomMod.VIDEO_GAMER_ENTITY, VideoGamerEntityRenderer::new);
 	}

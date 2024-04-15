@@ -34,6 +34,7 @@ public class BathroomItems {
 	public static final Item MUSHSPAWN = new MushspawnItem(new Item.Settings());
 	public static final Item MUSHLET_SPAWN_EGG = new SpawnEggItem(BathroomMod.MUSHLET_ENTITY, 0x00f15d, 0xffffff, new Item.Settings());
 	public static final Item PIG_CREEPER_SPAWN_EGG = new SpawnEggItem(BathroomMod.PIG_CREEPER_ENTITY, 0xFF9B86, 0x503D39, new Item.Settings());
+	public static final Item CLANGOR_SPAWN_EGG = new SpawnEggItem(BathroomMod.CLANGOR_ENTITY, 0x73B752, 0x191B10, new Item.Settings());
 	public static final Item BALL_GOLEM_SPAWN_EGG = new SpawnEggItem(BathroomMod.BALL_GOLEM_ENTITY, 0xCD82D7, 0x894F91, new Item.Settings());
 	public static final Item VIDEO_GAMER_SPAWN_EGG = new SpawnEggItem(BathroomMod.VIDEO_GAMER_ENTITY, 0xD7D3E1, 0x454152, new Item.Settings());
 
@@ -63,6 +64,7 @@ public class BathroomItems {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "mushspawn"), MUSHSPAWN);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "mushlet_spawn_egg"), MUSHLET_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "pig_creeper_spawn_egg"), PIG_CREEPER_SPAWN_EGG);
+		Registry.register(Registries.ITEM, new Identifier("bathroom", "clangor_spawn_egg"), CLANGOR_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "ball_golem_spawn_egg"), BALL_GOLEM_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "video_gamer_spawn_egg"), VIDEO_GAMER_SPAWN_EGG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bouncy_ball"), BOUNCY_BALL);

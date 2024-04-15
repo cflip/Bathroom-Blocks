@@ -9,16 +9,16 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.mob.EndermiteEntity;
-import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.SnowGolemEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.BiomeKeys;
 import su.bathroom.advancement.criterion.BouncyBallFireCriterion;
 import su.bathroom.entity.*;
@@ -37,6 +37,10 @@ public class BathroomMod implements ModInitializer {
 
 	public static final Identifier BOUNCE_SOUND_IDENTIFIER = new Identifier("bathroom", "basketball_bounce");
 	public static SoundEvent BASKETBALL_BOUNCE_SOUND = SoundEvent.of(BOUNCE_SOUND_IDENTIFIER);
+	public static final Identifier CLANGOR_AMBIENT_IDENTIFIER = new Identifier("bathroom", "clangor_ambient");
+	public static final SoundEvent ENTITY_CLANGOR_AMBIENT = SoundEvent.of(CLANGOR_AMBIENT_IDENTIFIER);
+	public static final Identifier CLANGOR_DEATH_IDENTIFIER = new Identifier("bathroom", "clangor_death");
+	public static SoundEvent ENTITY_CLANGOR_DEATH = SoundEvent.of(CLANGOR_DEATH_IDENTIFIER);
 
 	public static EntityType<MushletEntity> MUSHLET_ENTITY;
 	public static EntityType<PigCreeperEntity> PIG_CREEPER_ENTITY;
@@ -84,12 +88,13 @@ public class BathroomMod implements ModInitializer {
 		VIDEO_GAMER_ENTITY = Registry.register(Registries.ENTITY_TYPE, new Identifier("bathroom", "video_gamer"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, VideoGamerEntity::new).dimensions(new EntityDimensions(0.5F, 0.5F, true)).build());
 
 		BASKETBALL_BOUNCE_SOUND = Registry.register(Registries.SOUND_EVENT, BOUNCE_SOUND_IDENTIFIER, BASKETBALL_BOUNCE_SOUND);
+		ENTITY_CLANGOR_DEATH = Registry.register(Registries.SOUND_EVENT, CLANGOR_DEATH_IDENTIFIER, ENTITY_CLANGOR_DEATH);
 
 		BOUNCY_BALL_FIRE_CRITERION = Criteria.register(new BouncyBallFireCriterion());
 
 		FabricDefaultAttributeRegistry.register(MUSHLET_ENTITY, MushletEntity.createMushletAttributes());
 		FabricDefaultAttributeRegistry.register(PIG_CREEPER_ENTITY, PigCreeperEntity.createCreeperAttributes());
-		FabricDefaultAttributeRegistry.register(CLANGOR_ENTITY, ClangorEntity.createCreeperAttributes());
+		FabricDefaultAttributeRegistry.register(CLANGOR_ENTITY, ClangorEntity.createClangorAttributes());
 		FabricDefaultAttributeRegistry.register(BALL_GOLEM_ENTITY, SnowGolemEntity.createSnowGolemAttributes());
 		FabricDefaultAttributeRegistry.register(VIDEO_GAMER_ENTITY, VideoGamerEntity.createVideoGamerAttributes());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);

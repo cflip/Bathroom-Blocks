@@ -10,5 +10,17 @@
     "sounds": [
       "bathroom:records/yopersong"
     ]
+  },
+  "clangor_ambient": {
+    "subtitle": "subtitles.bathroom.clangor_ambient",
+    "sounds": [
+      "bathroom:mob/clangor/say1"
+    ]
+  },
+  "clangor_death": {
+    "subtitle": "subtitles.bathroom.clangor_death",
+    "sounds": [
+      "bathroom:mob/clangor/death"
+    ]
   }
 }
