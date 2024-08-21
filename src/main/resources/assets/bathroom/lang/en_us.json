@@ -52,6 +52,10 @@
     "item.bathroom.gamer_grub": "Gamer Grub",
     "item.bathroom.music_disc_yopersong": "Music Disc",
     "item.bathroom.music_disc_yopersong.desc": "Kjolt947 - Yopersong",
+    "item.bathroom.music_disc_votethisguy": "Music Disc",
+    "item.bathroom.music_disc_votethisguy.desc": "Kjolt947 - VOTE THIS GUY",
+    "item.bathroom.music_disc_redman": "Music Disc",
+    "item.bathroom.music_disc_redman.desc": "Kjolt947 - That is it, Binny!",
 
     "entity.bathroom.pig_creeper": "Pig Creeper",
     "entity.bathroom.clangor": "Clangor",
@@ -97,5 +101,8 @@
     "advancements.bathroom.yoper.title": "The Air Crackles with Freedom",
     "advancements.bathroom.yoper.description": "Obtain a yoper",
 
-    "subtitles.bathroom.basketball_bounce": "Basketball bounces"
+    "subtitles.bathroom.basketball_bounce": "Basketball bounces",
+    "subtitles.bathroom.clangor_ambient": "Clangor quavers",
+    "subtitles.bathroom.clangor_death": "Clangor fades out"
+
 }

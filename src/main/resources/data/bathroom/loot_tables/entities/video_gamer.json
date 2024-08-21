@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 4,
-          "name": "minecraft:redstone",
+          "name": "minecraft:copper_ingot",
           "functions": [
             {
               "function": "minecraft:set_count",

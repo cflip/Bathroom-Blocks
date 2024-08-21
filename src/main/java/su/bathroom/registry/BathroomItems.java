@@ -47,6 +47,13 @@ public class BathroomItems {
 	public static final Identifier YOPERSONG_IDENTIFIER = new Identifier("bathroom", "yopersong");
 	public static SoundEvent YOPERSONG = SoundEvent.of(YOPERSONG_IDENTIFIER);
 	public static final Item MUSIC_DISC_YOPERSONG = new MusicDiscItem(3,YOPERSONG, (new Item.Settings()).maxCount(1).rarity(Rarity.RARE), 116);
+	public static final Identifier VOTETHISGUY_IDENTIFIER = new Identifier("bathroom", "votethisguy");
+	public static SoundEvent VOTETHISGUY = SoundEvent.of(VOTETHISGUY_IDENTIFIER);
+	public static final Item MUSIC_DISC_VOTETHISGUY = new MusicDiscItem(10,VOTETHISGUY, (new Item.Settings()).maxCount(1).rarity(Rarity.RARE), 136);
+	public static final Identifier REDMAN_IDENTIFIER = new Identifier("bathroom", "redman");
+
+	public static SoundEvent REDMAN = SoundEvent.of(REDMAN_IDENTIFIER);
+	public static final Item MUSIC_DISC_REDMAN = new MusicDiscItem(10,REDMAN, (new Item.Settings()).maxCount(1).rarity(Rarity.RARE), 140);
 
 	public static void registerItems() {
 		Registry.register(Registries.ITEM, new Identifier("bathroom", "bathroom_critter"), BATHROOM_CRITTER);
@@ -75,6 +82,10 @@ public class BathroomItems {
 
 		YOPERSONG = Registry.register(Registries.SOUND_EVENT, YOPERSONG_IDENTIFIER, YOPERSONG);
 		Registry.register(Registries.ITEM, new Identifier("bathroom","music_disc_yopersong"),MUSIC_DISC_YOPERSONG);
+		VOTETHISGUY = Registry.register(Registries.SOUND_EVENT, VOTETHISGUY_IDENTIFIER, VOTETHISGUY);
+		Registry.register(Registries.ITEM, new Identifier("bathroom","music_disc_votethisguy"),MUSIC_DISC_VOTETHISGUY);
+		REDMAN = Registry.register(Registries.SOUND_EVENT, REDMAN_IDENTIFIER, REDMAN);
+		Registry.register(Registries.ITEM, new Identifier("bathroom","music_disc_redman"),MUSIC_DISC_REDMAN);
 
 		DispenserBlock.registerBehavior(BOUNCY_BALL, new ProjectileDispenserBehavior() {
 			@Override

@@ -26,6 +26,7 @@
     "block.bathroom.inky_moss_stone": "Blatched Moss Stone",
     "block.bathroom.yopore": "Yopore",
     "block.bathroom.block_of_gaming": "Cleat of Gaming",
+    "block.bathroom.lan_party": "LAN Simble",
 
     "item.bathroom.bathroom_critter": "Bathroom Wight",
     "item.bathroom.splendor_critter": "Wolder Wight",
@@ -35,19 +36,32 @@
     "item.bathroom.ricky_noodles": "Ricky Noodles",
     "item.bathroom.yoper": "Yoper",
     "item.bathroom.gummies": "Gummies",
+    "item.bathroom.gamer_goop": "Gamer Ooze",
+    "item.bathroom.gamers_delight": "Gamer's Liking",
     "item.bathroom.worms_in_dirt": "Worms in Earth",
     "item.bathroom.mushspawn": "Toadstoollingmake",
     "item.bathroom.mushlet_spawn_egg": "Toadstoolling Making Ey",
     "item.bathroom.pig_creeper_spawn_egg": "Pig Creeper Making Ey",
+    "item.bathroom.clangor_spawn_egg": "Woomer Making Ey",
     "item.bathroom.ball_golem_spawn_egg": "Ball Livenedman Making Ey",
+    "item.bathroom.video_gamer_spawn_egg": "Tape Gamer Making Ey",
     "item.bathroom.bouncy_ball": "Bouncy Ball",
     "item.bathroom.basketball": "Leepball",
     "item.bathroom.fertilizer_bag": "Loam Bag",
     "item.bathroom.compact_ball_golem": "Clised Ball Livenedman",
+    "item.bathroom.gamer_grub": "Gamer Mathe",
+    "item.bathroom.music_disc_yopersong": "Song Dish",
+    "item.bathroom.music_disc_yopersong.desc": "Kjolt947 - Yopersong",
+    "item.bathroom.music_disc_votethisguy": "Song Dish",
+    "item.bathroom.music_disc_votethisguy.desc": "Kjolt947 - VOTE THIS GUY",
+    "item.bathroom.music_disc_redman": "Song Dish",
+    "item.bathroom.music_disc_redman.desc": "Kjolt947 - I'm Gonna Rage I'm Gonna Turn Into",
 
     "entity.bathroom.pig_creeper": "Pig Creeper",
+    "entity.bathroom.clangor": "Woomer",
     "entity.bathroom.mushlet": "Toadstoolling",
     "entity.bathroom.ball_golem": "Ball Livenedman",
+    "entity.bathroom.video_gamer": "Tape Gamer",
 
     "painting.bathroom.eel.title": "Eel",
     "painting.bathroom.market.title": "Market",
@@ -87,5 +101,7 @@
     "advancements.bathroom.yoper.title": "The Lift Crackles with Freedom",
     "advancements.bathroom.yoper.description": "Get a yoper",
 
-    "subtitles.bathroom.basketball_bounce": "Leepball bounces"
+    "subtitles.bathroom.basketball_bounce": "Leepball bounces",
+    "subtitles.bathroom.clangor_ambient": "Woomer sings",
+    "subtitles.bathroom.clangor_death": "Woomer fades out"
 }

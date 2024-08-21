@@ -11,6 +11,18 @@
       "bathroom:records/yopersong"
     ]
   },
+  "votethisguy": {
+    "subtitle": "subtitles.bathroom.votethisguy",
+    "sounds": [
+      "bathroom:records/votethisguy"
+    ]
+  },
+  "redman": {
+    "subtitle": "subtitles.bathroom.redman",
+    "sounds": [
+      "bathroom:records/redman"
+    ]
+  },
   "clangor_ambient": {
     "subtitle": "subtitles.bathroom.clangor_ambient",
     "sounds": [

@@ -30,30 +30,6 @@
         ]
       }
     },
-    "has_apple": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:apple"
-            ]
-          }
-        ]
-      }
-    },
-    "has_glow_berries": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:glow_berries"
-            ]
-          }
-        ]
-      }
-    },
     "has_sweet_berries": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -77,8 +53,6 @@
     [
       "has_slime_ball",
       "has_melon_slice",
-      "has_apple",
-      "has_glow_berries",
       "has_sweet_berries",
       "has_the_recipe"
     ]

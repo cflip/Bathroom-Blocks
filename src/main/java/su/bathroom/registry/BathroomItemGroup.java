@@ -61,6 +61,8 @@ public class BathroomItemGroup {
 				entries.add(BathroomItems.BALL_GOLEM_SPAWN_EGG);
 				entries.add(BathroomItems.VIDEO_GAMER_SPAWN_EGG);
 				entries.add(BathroomItems.MUSIC_DISC_YOPERSONG);
+				entries.add(BathroomItems.MUSIC_DISC_VOTETHISGUY);
+				entries.add(BathroomItems.MUSIC_DISC_REDMAN);
 			})
 			.build();
 

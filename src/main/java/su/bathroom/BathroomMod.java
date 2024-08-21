@@ -98,6 +98,7 @@ public class BathroomMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(BALL_GOLEM_ENTITY, SnowGolemEntity.createSnowGolemAttributes());
 		FabricDefaultAttributeRegistry.register(VIDEO_GAMER_ENTITY, VideoGamerEntity.createVideoGamerAttributes());
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.BEACH), SpawnGroup.MONSTER, PIG_CREEPER_ENTITY, 1, 12, 20);
+		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DRIPSTONE_CAVES), SpawnGroup.MONSTER, CLANGOR_ENTITY, 20, 0, 1);
 
 		BathroomBlocks.registerBlocks();
 		BathroomItems.registerItems();
