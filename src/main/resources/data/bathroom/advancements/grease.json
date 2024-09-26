@@ -1,0 +1,35 @@
+{
+  "parent": "bathroom:splendor",
+  "display": {
+    "icon": {
+      "item": "bathroom:grease_critter"
+    },
+    "title": {
+      "translate": "advancements.bathroom.grease.title"
+    },
+    "description": {
+      "translate": "advancements.bathroom.grease.description"
+    },
+    "frame": "goal",
+    "hidden": true
+  },
+  "criteria": {
+    "craft_grease_critter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:grease_critter"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "craft_grease_critter"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bathroom:gamer_goop"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "bathroom:gamers_delight"
+  }
+}

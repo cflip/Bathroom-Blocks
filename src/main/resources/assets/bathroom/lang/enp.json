@@ -55,7 +55,7 @@
     "item.bathroom.music_disc_votethisguy": "Song Dish",
     "item.bathroom.music_disc_votethisguy.desc": "Kjolt947 - VOTE THIS GUY",
     "item.bathroom.music_disc_redman": "Song Dish",
-    "item.bathroom.music_disc_redman.desc": "Kjolt947 - I'm Gonna Rage I'm Gonna Turn Into",
+    "item.bathroom.music_disc_redman.desc": "Kjolt947 - That is it, Binny!",
 
     "entity.bathroom.pig_creeper": "Pig Creeper",
     "entity.bathroom.clangor": "Woomer",
@@ -68,11 +68,13 @@
     "painting.bathroom.damp.title": "Damp",
     "painting.bathroom.hellpipe.title": "Hellpipe",
     "painting.bathroom.fish_curtain.title": "Aquarium",
+    "painting.bathroom.wriggle.title": "Wriggle",
     "painting.bathroom.eel.author": "Kjolt947",
     "painting.bathroom.market.author": "Kjolt947",
     "painting.bathroom.damp.author": "Kjolt947",
     "painting.bathroom.hellpipe.author": "Kjolt947",
     "painting.bathroom.fish_curtain.author": "Cflip.net",
+    "painting.bathroom.wriggle.author": "Kjolt947",
 
     "advancements.bathroom.root.title": "Bathroom Cleats",
     "advancements.bathroom.root.description": "Get raw bathroom",
@@ -98,7 +100,9 @@
     "advancements.bathroom.critter.description": "Beshape a bathroom wight",
     "advancements.bathroom.splendor.title": "O' Peponburg Wolder",
     "advancements.bathroom.splendor.description": "Beshape a wolder wight",
-    "advancements.bathroom.yoper.title": "The Lift Crackles with Freedom",
+    "advancements.bathroom.grease.title": "Our Lord and Saviour",
+    "advancements.bathroom.grease.description": "Beshape a rizzle wight",
+    "advancements.bathroom.yoper.title": "Where There's Yope",
     "advancements.bathroom.yoper.description": "Get a yoper",
 
     "subtitles.bathroom.basketball_bounce": "Leepball bounces",

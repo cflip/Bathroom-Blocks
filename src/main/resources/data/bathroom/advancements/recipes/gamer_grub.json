@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_mushroom_stew": {
+    "has_spider_eye": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -18,7 +18,7 @@
         ]
       }
     },
-    "has_gummies": {
+    "has_gaming": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -51,8 +51,8 @@
   },
   "requirements": [
     [
-      "has_gummies",
-      "has_mushroom_stew",
+      "has_gaming",
+      "has_spider_eye",
       "has_ghast_tear",
       "has_the_recipe"
     ]

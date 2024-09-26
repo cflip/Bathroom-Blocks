@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_block"
+    },
+    "G": {
+      "item": "minecraft:netherrack"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "I#I",
+    "#G#",
+    "I#I"
+  ],
+  "result": {
+    "item": "bathroom:grease_critter"
+  }
+}

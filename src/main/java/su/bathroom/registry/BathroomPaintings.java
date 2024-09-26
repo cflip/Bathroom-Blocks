@@ -12,6 +12,7 @@ public class BathroomPaintings {
 		createPainting("market", 16, 16);
 		createPainting("hellpipe", 32, 16);
 		createPainting("fish_curtain", 16, 16);
+		createPainting("wriggle", 32, 32);
 	}
 
 	private static void createPainting(String id, int width, int height) {

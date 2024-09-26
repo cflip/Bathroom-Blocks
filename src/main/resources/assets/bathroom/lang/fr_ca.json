@@ -52,6 +52,10 @@
   "item.bathroom.gamer_grub": "Mégot de joueur",
   "item.bathroom.music_disc_yopersong": "Disque de musique",
   "item.bathroom.music_disc_yopersong.desc": "Kjolt947 - Yopersong",
+  "item.bathroom.music_disc_votethisguy": "Disque de musique",
+  "item.bathroom.music_disc_votethisguy.desc": "Kjolt947 - VOTE THIS GUY",
+  "item.bathroom.music_disc_redman": "Disque de musique",
+  "item.bathroom.music_disc_redman.desc": "Kjolt947 - That is it, Binny!",
 
   "entity.bathroom.pig_creeper": "Creeper Cochon",
   "entity.bathroom.clangor": "Clangueur",
@@ -64,11 +68,13 @@
   "painting.bathroom.damp.title": "Damp",
   "painting.bathroom.hellpipe.title": "Hellpipe",
   "painting.bathroom.fish_curtain.title": "Aquarium",
+  "painting.bathroom.wriggle.title": "Wriggle",
   "painting.bathroom.eel.author": "Kjolt947",
   "painting.bathroom.market.author": "Kjolt947",
   "painting.bathroom.damp.author": "Kjolt947",
   "painting.bathroom.hellpipe.author": "Kjolt947",
   "painting.bathroom.fish_curtain.author": "Cflip.net",
+  "painting.bathroom.wriggle.author": "Kjolt947",
 
   "advancements.bathroom.root.title": "Blocs de bain",
   "advancements.bathroom.root.description": "Obtenez de tuilebain brute",
@@ -91,11 +97,15 @@
   "advancements.bathroom.ricky.title": "Recette de famille",
   "advancements.bathroom.ricky.description": "Craftez Nouilles Ricky",
   "advancements.bathroom.critter.title": "Latrinalia divine",
-  "advancements.bathroom.critter.description": "Donnez forme à une bestiole de splendeur",
+  "advancements.bathroom.critter.description": "Donnez forme à une bestiole de bain",
   "advancements.bathroom.splendor.title": "L'esprit de Melondeau",
   "advancements.bathroom.splendor.description": "Donnez forme à une bestiole de splendeur",
-  "advancements.bathroom.yoper.title": "L'air crépite de liberté",
+  "advancements.bathroom.grease.title": "Notre seigneur et sauveur",
+  "advancements.bathroom.grease.description": "Donnez forme à une bestiole de graisse",
+  "advancements.bathroom.yoper.title": "La où il y a Yope",
   "advancements.bathroom.yoper.description": "Obtenez un yopeur",
 
-  "subtitles.bathroom.basketball_bounce": "Rebonds de basket-ball"
+  "subtitles.bathroom.basketball_bounce": "Rebonds de basket-ball",
+  "subtitles.bathroom.clangor_ambient": "Clangeur carillonne",
+  "subtitles.bathroom.clangor_death": "Clangeur s'éteint"
 }

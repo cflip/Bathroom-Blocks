@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bathroom:gamers_delight"
+    ]
+  },
+  "criteria": {
+    "has_gamer_goop": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bathroom:gamer_goop"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bathroom:gamers_delight"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gamer_goop",
+      "has_the_recipe"
+    ]
+  ]
+}
